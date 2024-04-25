@@ -1,0 +1,63 @@
+.jack{
+    font-size: 20px;
+    margin-left: 80px;
+    font-weight: 200px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 18px;
+    
+
+}
+.div{
+    margin-left:10px;
+    height: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-radius: 20px;
+    margin-top:100px;
+}
+.second{
+    font-size: 20px;
+    margin-left: 80px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 200px;
+  
+
+}
+.three{
+    height: 30px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-left: 18px;
+    border-radius: 20px;
+    
+}
+
+    
+
+.one{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0;
+    margin: 0;
+    margin-top: 60px;
+}
+.button button{
+    height: 40px;
+    width: 70px;
+    color: brown;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 50px;
+    margin-left: 700px;
+   border-bottom-right-radius: 10px;
+   border-bottom-left-radius: 10px;
+   border-color: black;
+    
+}
+.all{
+    
+    background-image: url(../../Assets/userlogin.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+    
+
