@@ -1,7 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Register.css";
 
 function Register() {
+  const[Reg,setReg]=useState({
+    FirstName:"",
+    LastName:"",
+    Email:"",
+    City:"",
+    DateofBirth:"",
+    Address:"",
+    Pincode:"",
+    Contact:"",
+    Gender:"",
+    Password:"",
+    ConfirmPassword:""
+
+
+  })
+  const myfunction=((r)=>{
+    setReg({
+      ...Reg,[r.target.name]:r.target.value
+  })
+  console.log(Reg)
+  })
   return (
     <div className='main'>
       
@@ -12,19 +33,19 @@ function Register() {
               <p>First Name:</p>
           </div>
           <div className='col-6 input-top'  >
-            <input type='text' placeholder='Enter your name'/>
+            <input type='text' placeholder='Enter your name' name='FirstName'value={Reg.FirstName} onChange={myfunction}/>
           </div>
           <div className='col-6'>
               <p>Last Name:</p>
           </div>
           <div className='col-6' >
-            <input type='text' placeholder='Enter your name'/>
+            <input type='text' placeholder='Enter your name' name='LastName' value={Reg.LastName} onChange={myfunction}/>
           </div>
           <div className='col-6'>
               <p>Email:</p>
           </div>
           <div className='col-6' >
-            <input type='text' placeholder='Enter your Email'/>
+            <input type='email' placeholder='Enter your Email' name='Email' value={Reg.Email} onChange={myfunction}/>
           </div>
           <div className='col-6'>
               <p>City:</p>
@@ -37,7 +58,7 @@ function Register() {
               <p>Date of Birth:</p>
           </div>
           <div className='col-6 ' >
-            <input type='date' className='date'/>
+            <input type='date' className='date' name='Date of Birth' value={Reg.DateofBirth} onChange={myfunction}/>
           </div>
           <div className='col-6'>
               <p>Address:</p>
@@ -49,13 +70,13 @@ function Register() {
               <p>Pincode:</p>
           </div>
           <div className='col-6' >
-            <input type='text'/>
+            <input type='text' name='Pincode' value={Reg.Pincode} onChange={myfunction}/>
           </div>
           <div className='col-6'>
               <p>Contact:</p>
           </div>
           <div className='col-6' >
-            <input type='contact'/>
+            <input type='contact' name='contact' value={Reg.Contact}onChange={myfunction}/>
           </div>
           <div className='col-6'>
               <p>Gender:</p>
@@ -68,13 +89,13 @@ function Register() {
               <p>Password:</p>
           </div>
           <div className='col-6' >
-            <input type='password'/>
+            <input type='password' name='Password' value={Reg.Password}onChange={myfunction}/>
           </div>
           <div className='col-6'>
               <p>Confirm <br/>Password:</p>
           </div>
           <div className='col-6' >
-            <input type='password'/>
+            <input type='password' name='ConfirmPassword' value={Reg.ConfirmPassword} onChange={myfunction}/>
           </div>
           <div className='col-6'  >
           <button type='button ' className='button_1'>Register</button>

@@ -1,0 +1,19 @@
+.para_para{
+    height: 500px   ;
+    width: 200px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 100px;   
+margin-left: 450px;
+}
+   
+
+.para_para input{
+  
+border-style: outset;
+height: 40px;
+}
+.heading_1{
+    text-align: center;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
