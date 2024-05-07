@@ -8,6 +8,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js"
 import Register from './Components/User/Register'
 import UserView from './Components/User/UserView';
 import Petshophomepage from './Components/User/Petshophomepage';
+import Petlogin from './Components/User/Petshop/Petlogin';
 
 
 
@@ -18,6 +19,7 @@ function App() {
     <BrowserRouter>
     <div>
      <Routes>
+      {/* user */}
       <Route path='/Userlogin' element={[<Navbar/>,<Userlogin/>]}/>
       <Route path='/Loginnavbar'element={<Navbar/>}/>
       <Route path='/Registerationpage' element={<Register/>}></Route>
@@ -25,6 +27,8 @@ function App() {
       <Route path='/homepage' element={<Petshophomepage/>}></Route>
 
 
+    {/* petshop */}
+    <Route path='/petlogin' element={<Petlogin/>}></Route>
 
     
 
