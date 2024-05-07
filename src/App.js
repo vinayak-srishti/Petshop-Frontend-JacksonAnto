@@ -6,6 +6,8 @@ import Navbar from './Components/User/Navbar';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js"
 import Register from './Components/User/Register'
+import UserView from './Components/User/UserView';
+import Petshophomepage from './Components/User/Petshophomepage';
 
 
 
@@ -19,6 +21,10 @@ function App() {
       <Route path='/Userlogin' element={[<Navbar/>,<Userlogin/>]}/>
       <Route path='/Loginnavbar'element={<Navbar/>}/>
       <Route path='/Registerationpage' element={<Register/>}></Route>
+      <Route path='/User' element={<UserView/>}></Route>
+      <Route path='/homepage' element={<Petshophomepage/>}></Route>
+
+
 
     
 
