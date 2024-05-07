@@ -8,7 +8,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js"
 import Register from './Components/User/Register'
 import UserView from './Components/User/UserView';
 import Petshophomepage from './Components/User/Petshophomepage';
-import Petlogin from './Components/User/Petshop/Petlogin';
+import Petshoplogin from './Components/Petshop-folder/Petshoplogin';
 
 
 
@@ -28,7 +28,7 @@ function App() {
 
 
     {/* petshop */}
-    <Route path='/petlogin' element={<Petlogin/>}></Route>
+    <Route path='/petlogin' element={<Petshoplogin/>}></Route>
 
     
 
