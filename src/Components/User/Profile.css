@@ -1,0 +1,82 @@
+/* Main container to center the profile */
+.profile-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f4f7fc; /* Light background color for the whole profile */
+  border-radius: 8px; /* Rounded corners for the container */
+}
+
+/* Header styles */
+.profile-header {
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: #007bff; /* Blue background for the header */
+  padding: 15px 0; /* Vertical padding for spacing */
+  border-radius: 8px 8px 0 0; /* Rounded top corners */
+}
+
+.profile-header h1 {
+  font-size: 2rem;
+  color: white; /* White text for better contrast */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-icon {
+  margin-right: 8px;
+  font-size: 1.5rem; /* Larger icon for prominence */
+}
+
+/* Styling for profile details section */
+.profile-details {
+  background-color: #ffffff; /* White background for the details area */
+  padding: 20px;
+  border-radius: 0 0 8px 8px; /* Rounded bottom corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for a raised effect */
+}
+
+/* List for displaying profile details */
+.profile-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* More spacing between items */
+}
+
+/* Each profile item: label and value */
+.profile-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 1rem;
+}
+
+/* Bold text for the labels (dt) */
+.profile-item dt {
+  font-weight: bold;
+  color: #333; /* Dark text for the labels */
+}
+
+/* Add some spacing and contrast to the edit button */
+.edit-button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #28a745; /* Green background for the Edit button */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Button hover effect */
+.edit-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+/* Add some bottom margin to give space after the profile */
+.profile-details {
+  margin-bottom: 20px;
+}

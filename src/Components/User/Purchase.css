@@ -1,0 +1,30 @@
+.text-center img{
+    height: 600px;
+    padding-top: 40px;
+}
+.card li{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 800;
+   
+}
+.cards-height li{
+    height: 70px;
+    border: none;
+
+}ˇ
+.dog img{
+    height: 450px;
+    width: 400px;
+}
+
+.cards-heights li{
+    height: 70px;
+ 
+}
+.cards-heights{
+    margin-top: 90px;
+
+}
+.cards-heights li{
+    border: none;
+}
