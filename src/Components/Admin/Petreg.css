@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+.parent{
+    background-image: url("../../Assets/regs.jpg"); 
+    background-position: center;
+    position: fixed;
+    width: 100%;
+    background-size: 1450px;
+    }
+.reg h1{
+    margin-right: 120px;
+    color: white ;
+    margin-top: 40px;
+}
+
+
+label{
+    color: white;
+}
+
+
+
+.total24{
+    background-color:transparent;
+     /* border:5px solid rgb(245, 243, 243);  */
+    height: 800px;
+    width: 600px;
+    margin: auto;
+    margin-top: 5px;
+    padding: 0;
+
+}
+
+.sign-button{
+margin-left:250px;
+margin-top: 20px;
+}
+.state input{
+ 
+}

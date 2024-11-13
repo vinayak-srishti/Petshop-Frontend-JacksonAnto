@@ -9,6 +9,9 @@ import Register from './Components/User/Register'
 import UserView from './Components/User/UserView';
 import Petshophomepage from './Components/User/Petshophomepage';
 import Petshoplogin from './Components/Petshop-folder/Petshoplogin';
+import Loginpet from './Components/Petshop-folder/Loginpet';
+import Petshopreg from './Components/Admin/Petshopreg';
+
 
 
 
@@ -29,6 +32,12 @@ function App() {
 
     {/* petshop */}
     <Route path='/petlogin' element={<Petshoplogin/>}></Route>
+    <Route path='/login' element={<Loginpet/>}></Route>
+    <Route path='petreg' element={<Petshopreg/>}></Route>
+   
+
+
+   
 
     
 
