@@ -1,0 +1,19 @@
+.buy-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    
+}
+.heading-buy{
+   padding-top:220px ;
+    margin-left: 150px;
+}
+.heading-buy p{
+    font-style: italic;
+    font-weight: 500px;
+}
+.heading-buy h1{
+    letter-spacing: 1px;
+  font-style: italic;
+}

@@ -1,0 +1,24 @@
+/* Nav2.css */
+.navbar {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .nav-link {
+    font-size: 1rem;
+    margin-right: 20px;
+  }
+  
+  .nav-link.active {
+    color: #007bff;
+  }
+  
+  .btn-dark {
+    font-size: 1rem;
+    padding: 8px 20px;
+  }
+  
