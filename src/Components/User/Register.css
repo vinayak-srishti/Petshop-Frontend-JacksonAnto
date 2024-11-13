@@ -3,7 +3,7 @@
     height: 560px;
     margin-top: 100px;
     margin-left: 300px;
-    background-color: rgba(0, 255, 255, 0.188);
+    background-color: rgba(0, 255, 255, 0.12);
     border-radius: 12px;
 }
 .register-head{
@@ -19,14 +19,15 @@
     border-radius: 20px;
 }
 .date{
-width: 200px;
+width: 180px;
 }
 .button_1{
     width:200px;
     margin-left: 130px;
    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-bottom: 0px;
-    background-color: rgba(0, 255, 255, 0.087);
+background-color:palegoldenrod;
+
 }
 .full{
     text-align: center;
@@ -39,4 +40,10 @@ width: 200px;
  background-repeat: no-repeat;
  background-size: cover;
  height: 100vh;
+}
+
+.selectdiv .select,option{
+    width: 175px;
+    height: 25px;
+    border-radius: 20px;
 }

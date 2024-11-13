@@ -1,0 +1,76 @@
+/* Nav.css */
+
+.navbar {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .navbar-logo {
+    width: 40px; /* Optional: Adjust according to your logo size */
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .nav-link {
+    color: #333;
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+  
+  .nav-link:hover,
+  .nav-link.active {
+    color: #f0a500; /* Highlight color */
+    border-bottom: 2px solid #f0a500;
+  }
+  
+  .navbar-actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon-profile {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .icon-profile:hover {
+    color: #f0a500; /* Icon hover color */
+  }
+  
+  .btn-dark {
+    background-color: #f0a500;
+    color: white;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 1rem;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-dark:hover {
+    background-color: #d88700; /* Darker shade on hover */
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-nav {
+      text-align: center;
+      margin-top: 20px;
+    }
+  
+    .navbar-actions {
+      margin-top: 10px;
+      justify-content: center;
+    }
+  }
+  
