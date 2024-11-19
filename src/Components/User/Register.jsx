@@ -1,19 +1,21 @@
 import React, { useState } from 'react'
 import "./Register.css";
+import { PiApproximateEqualsDuotone } from 'react-icons/pi';
+import axios from 'axios';
 
 function Register() {
   const[Reg,setReg]=useState({
-    FirstName:"",
-    LastName:"",
-    Email:"",
-    City:"",
-    DateofBirth:"",
-    Address:"",
-    Pincode:"",
-    Contact:"",
-    Gender:"",
-    Password:"",
-    ConfirmPassword:""
+    firstName:"",
+    lastName:"",
+    email:"",
+    city:"",
+    dateofbirth:"",
+    address:"",
+    pincode:"",
+    contact:"",
+    gender:"",
+    password:"",
+    confirmPassword:""
 
 
   })
@@ -23,6 +25,17 @@ function Register() {
   })
   console.log(Reg)
   })
+
+  const handleSubmit=(()=>{
+   axios.post('http://localhost:2006/petshopuserregistration',Reg)
+   .then((res)=>{
+console.log(res)
+   })
+   .catch((err)=>{
+    console.log(err)
+   })
+  })
+
   return (
     <div className='main'>
 
@@ -33,55 +46,55 @@ function Register() {
               <p>First Name:</p>
           </div>
           <div className='col-6 input-top'  >
-            <input type='text' placeholder='Enter your name' name='FirstName'value={Reg.FirstName} onChange={myfunction}/>
+            <input type='text' placeholder='Enter your name' name='firstName'value={Reg.firstName} onChange={myfunction}/>
           </div>
           <div className='col-6'>
               <p>Last Name:</p>
           </div>
           <div className='col-6' >
-            <input type='text' placeholder='Enter your name' name='LastName' value={Reg.LastName} onChange={myfunction}/>
+            <input type='text' placeholder='Enter your name' name='lastName' value={Reg.lastName} onChange={myfunction}/>
           </div>
           <div className='col-6'>
               <p>Email:</p>
           </div>
           <div className='col-6' >
-            <input type='email' placeholder='Enter your Email' name='Email' value={Reg.Email} onChange={myfunction}/>
+            <input type='email' placeholder='Enter your Email' name='email' value={Reg.email} onChange={myfunction}/>
           </div>
           <div className='col-6'>
               <p>City:</p>
 
           </div>
-          <div className='col-6 selectdiv'>
-            <select name="" id="" className='rounded rounded-5 select'>
-              <option value="">Select</option>
-              <option value="">Tamil Nadu</option>
-              <option value="">Kerala</option>
-              <option value="">New Delhi</option>
-            </select>
+            <div className='col-6 selectdiv'>
+              <select name='city'  value={Reg.city} onChange={myfunction}id="" className='rounded rounded-5 select'>
+                <option value="">Select</option>
+                <option value="Tamil adu">Tamil Nadu</option>
+                <option value="kerala">Kerala</option>
+                <option value="New delhi">New Delhi</option>
+              </select>
           </div>
           <div className='col-6'>
               <p>Date of Birth:</p>
           </div>
           <div className='col-6 ' >
-            <input type='date' className='date' name='Date of Birth' value={Reg.DateofBirth} onChange={myfunction}/>
+            <input type='date' className='date' name='date of birth' value={Reg.dateofbirth} onChange={myfunction}/>
           </div>
           <div className='col-6'>
               <p>Address:</p>
           </div>
           <div className='col-6' >
-            <input type='text'/>
+            <input type='text' name='address'value={Reg.address} onChange={myfunction}/>
           </div>
           <div className='col-6'>
               <p>Pincode:</p>
           </div>
           <div className='col-6' >
-            <input type='text' name='Pincode' value={Reg.Pincode} onChange={myfunction}/>
+            <input type='text' name='pincode' value={Reg.pincode} onChange={myfunction}/>
           </div>
           <div className='col-6'>
               <p>Contact:</p>
           </div>
           <div className='col-6' >
-            <input type='contact' name='contact' value={Reg.Contact}onChange={myfunction}/>
+            <input type='contact' name='contact' value={Reg.contact}onChange={myfunction}/>
           </div>
           <div className='col-6 mb-3'>
               <label htmlFor="gender">Gender:</label>
@@ -94,16 +107,16 @@ function Register() {
               <p>Password:</p>
           </div>
           <div className='col-6' >
-            <input type='password' name='Password' value={Reg.Password}onChange={myfunction}/>
+            <input type='password' name='password' value={Reg.password}onChange={myfunction}/>
           </div>
           <div className='col-6'>
               <p>Confirm Password:</p>
           </div>
           <div className='col-6' >
-            <input type='password' name='ConfirmPassword' value={Reg.ConfirmPassword} onChange={myfunction}/>
+            <input type='password' name='confirmPassword' value={Reg.confirmPassword} onChange={myfunction}/>
           </div>
           <div className='col-6'  >
-          <button type='button ' className='button_1'>Register</button>
+          <button type='button 'onClick={handleSubmit} className='button_1'>Register</button>
           </div>
          <a href=''>Already have account  </a>
 
@@ -119,3 +132,4 @@ function Register() {
 }
 
 export default Register
+
