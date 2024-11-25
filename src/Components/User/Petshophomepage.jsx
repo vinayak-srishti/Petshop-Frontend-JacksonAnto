@@ -8,15 +8,15 @@ import dog1 from "../../Assets/dog1.jpg";
 import dog3 from "../../Assets/dog3.jpg";
 import cat2 from "../../Assets/cat2.jpg";
 import hompagedog from "../../Assets/hompagedog.jpg";
+import Navbar from './Navbar';
 
 function Petshophomepage() {
   return (
     <div className="main-background">
       {/* Hero Image Section */}
-      <section className="hero-section">
-        <img src={hompagedog} className="hero-image" alt="Dog" />
-      </section>
-
+     <div>
+     <Navbar/>
+     </div>
       {/* Carousel Section */}
       <div className="carousel-container">
         <div id="carouselExampleDark" className="carousel carousel-dark slide">

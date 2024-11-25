@@ -1,10 +1,9 @@
 import React from 'react';
-import './PetShopAdminLogin.css';  // Ensure the CSS reflects the new class names
-import { RiUser3Fill, RiLock2Fill } from 'react-icons/ri';  // Import icons from react-icons
+import './PetShopAdminLogin.css'; 
+import { RiUser3Fill, RiLock2Fill } from 'react-icons/ri'; 
 
 function PetShopAdminLogin() {
  
-
   return (
     <div className="petshopAdminLogin-page">
       <div className="petshopAdminLogin-form-container">

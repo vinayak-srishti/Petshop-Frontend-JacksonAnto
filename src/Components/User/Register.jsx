@@ -5,8 +5,8 @@ import axios from 'axios';
 
 function Register() {
   const[Reg,setReg]=useState({
-    firstName:"",
-    lastName:"",
+    firstname:"",
+    lastname:"",
     email:"",
     city:"",
     dateofbirth:"",
@@ -27,7 +27,7 @@ function Register() {
   })
 
   const handleSubmit=(()=>{
-   axios.post('http://localhost:2006/petshopuserregistration',Reg)
+   axios.post('http://localhost:2024/petshopuserregistration',Reg)
    .then((res)=>{
 console.log(res)
    })
@@ -38,7 +38,6 @@ console.log(res)
 
   return (
     <div className='main'>
-
       <h1 className='full'>User Registeration page</h1>
       <div class="container  container-maindiv">
         <div  class='row register_para' >
@@ -46,13 +45,13 @@ console.log(res)
               <p>First Name:</p>
           </div>
           <div className='col-6 input-top'  >
-            <input type='text' placeholder='Enter your name' name='firstName'value={Reg.firstName} onChange={myfunction}/>
+            <input type='text' placeholder='Enter your name' name='firstname'value={Reg.firstname} onChange={myfunction}/>
           </div>
           <div className='col-6'>
               <p>Last Name:</p>
           </div>
           <div className='col-6' >
-            <input type='text' placeholder='Enter your name' name='lastName' value={Reg.lastName} onChange={myfunction}/>
+            <input type='text' placeholder='Enter your name' name='lastname' value={Reg.lastname} onChange={myfunction}/>
           </div>
           <div className='col-6'>
               <p>Email:</p>
@@ -76,7 +75,7 @@ console.log(res)
               <p>Date of Birth:</p>
           </div>
           <div className='col-6 ' >
-            <input type='date' className='date' name='date of birth' value={Reg.dateofbirth} onChange={myfunction}/>
+            <input type='date' className='date' name='dateofbirth' value={Reg.dateofbirth} onChange={myfunction}/>
           </div>
           <div className='col-6'>
               <p>Address:</p>
@@ -97,12 +96,13 @@ console.log(res)
             <input type='contact' name='contact' value={Reg.contact}onChange={myfunction}/>
           </div>
           <div className='col-6 mb-3'>
-              <label htmlFor="gender">Gender:</label>
+              <label htmlFor="gender"value={Reg.gender}onChange={myfunction} name='gender'>Gender:</label>
           </div>
           <div className='col-6 mb-3' >
-            <input name='gender' type='radio'/>   Male
-            <input name='gender' className='ms-2' type='radio'/>   Female
+            <input name='gender' value="male" onChange={myfunction} type='radio'/>   Male
+            <input name='gender' value="female" onChange={myfunction}className='ms-2'type='radio'/>   Female
           </div>
+      
           <div className='col-6'>
               <p>Password:</p>
           </div>
@@ -132,4 +132,5 @@ console.log(res)
 }
 
 export default Register
+
 
