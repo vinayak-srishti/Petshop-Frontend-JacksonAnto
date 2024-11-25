@@ -3,7 +3,53 @@ import React from 'react';
 import './Edit.css';  // Ensure the CSS file has styles for the updated class names
 import { RiUser3Fill, RiLock2Fill } from 'react-icons/ri';  // Import icons from react-icons
 
+import React, { useState } from 'react';
+import './Edit.css';
+import { RiUser3Fill, RiLock2Fill } from 'react-icons/ri';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+
 function Userlogin() {
+
+  const navigate = useNavigate()
+  const [login, setLogin] = useState({
+    email: "",
+    password: ""
+  })
+
+  const mylogin = ((q) => {
+    setLogin({
+      ...login, [q.target.name]: q.target.value
+
+    })
+    console.log(login);
+  })
+
+  const changelogin = ((e) => {
+    e.preventDefault()
+    if (login.email, login.password) {
+      axios.post('http://localhost:2024/login',login)
+        .then((response) => {
+          if(response.data.status==200){
+          alert("logins ucessfuly")
+          navigate('/homepage')
+          console.log(response);
+          }
+          else{
+            alert(response.data.msg)
+          }
+
+        })
+        .catch((error) => {
+          console.log(error);
+        })
+
+    }
+    else {
+      alert("please check your password")
+    }
+  })
+
   return (
     <div className="main-user">
       <div className="login-container">
@@ -12,17 +58,17 @@ function Userlogin() {
 
           {/* Username Input */}
           <div className="input-group">
-            <input type="text" placeholder="Username" className="input-field" required />
+            <input type="text" placeholder="email" className="input-field" required name='email' value={login.email} onChange={mylogin} />
             <RiUser3Fill className="input-icon" />
           </div>
 
           {/* Password Input */}
           <div className="input-group">
-            <input type="password" placeholder="Password" className="input-field" required />
+            <input type="password" placeholder="Password" className="input-field" name='password' value={login.password} onChange={mylogin} required />
             <RiLock2Fill className="input-icon" />
           </div>
 
-          {/* Remember Me and Forget Password */}
+
           <div className="options-group">
             <label className="remember-me">
               <input type="checkbox" /> Remember Me
@@ -30,12 +76,12 @@ function Userlogin() {
             <a href="#" className="forget-password">Forget Password?</a>
           </div>
 
-          {/* Login Button */}
+
           <div>
-            <button type="submit" className="login-btn">Login</button>
+            <button type="submit" className="login-btn" onClick={changelogin}>Login</button>
           </div>
 
-          {/* Register Link */}
+          {/* ////login */}
           <div className="register-link">
             <p>Don't have an account? <a href="#">Register</a></p>
           </div>
@@ -46,3 +92,5 @@ function Userlogin() {
 }
 
 export default Userlogin;
+
+

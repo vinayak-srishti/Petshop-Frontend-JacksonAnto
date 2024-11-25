@@ -5,18 +5,18 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 function Register() {
-  const [Reg, setReg] = useState({
-    firstname: "",
-    lastname: "",
-    email: "",
-    city: "",
-    dateofbirth: "",
-    address: "",
-    pincode: "",
-    contact: "",
-    gender: "",
-    password: "",
-    confirmPassword: ""
+  const[Reg,setReg]=useState({
+    firstName:"",
+    lastName:"",
+    email:"",
+    city:"",
+    dateofbirth:"",
+    address:"",
+    pincode:"",
+    contact:"",
+    gender:"",
+    password:"",
+    confirmPassword:""
 
 
   })
@@ -29,49 +29,18 @@ function Register() {
     console.log(Reg)
   })
 
-  const handleSubmitt = (() => {
-    console.log(Reg);
-   if(!Reg.firstname){
-   }
-   else if(!Reg.lastname){
-  }
-  else if(!Reg.email){
-  }
-  else if(!Reg.city){
-  }
-   else if(!Reg.dateofbirth){
-  }
-  else if(!Reg.address){
-  } 
-  else if(!Reg.pincode){
-  }
-  else if(!Reg.contact){
-  }
-  else if(!Reg.gender){
-  }
-  else if(!Reg.password){
-
-  }
-  else if (Reg.password!== Reg.confirmPassword){
-    alert("password error")
-  }
-  
- else {
-
-    axios.post('http://localhost:2024/petshopuserregistration', Reg)
-      .then((res) => {
-        console.log(res)
-        alert('Registration successful!');
-        navigate('/Userlogin');
-      })
-      .catch((err) => {
-        console.log(err)
-      })
-}})
+  const handleSubmit=(()=>{
+   axios.post('http://localhost:2006/petshopuserregistration',Reg)
+   .then((res)=>{
+console.log(res)
+   })
+   .catch((err)=>{
+    console.log(err)
+   })
+  })
 
   return (
     <div className='main'>
-
       <h1 className='full'>User Registeration page</h1>
       <div class="container  container-maindiv">
         <div class='row register_para' >
@@ -79,13 +48,13 @@ function Register() {
             <p>First Name:</p>
           </div>
           <div className='col-6 input-top'  >
-            <input type='text' placeholder='Enter your name' name='firstname' value={Reg.firstName} onChange={myfunction} />
+            <input type='text' placeholder='Enter your name' name='firstName'value={Reg.firstName} onChange={myfunction}/>
           </div>
           <div className='col-6'>
             <p>Last Name:</p>
           </div>
           <div className='col-6' >
-            <input type='text' placeholder='Enter your name' name='lastname' value={Reg.lastName} onChange={myfunction} />
+            <input type='text' placeholder='Enter your name' name='lastName' value={Reg.lastName} onChange={myfunction}/>
           </div>
           <div className='col-6'>
             <p>Email:</p>
@@ -109,7 +78,7 @@ function Register() {
             <p>Date of Birth:</p>
           </div>
           <div className='col-6 ' >
-            <input type='date' className='date' name='dateofbirth' value={Reg.dateofbirth} onChange={myfunction} />
+            <input type='date' className='date' name='date of birth' value={Reg.dateofbirth} onChange={myfunction}/>
           </div>
           <div className='col-6'>
             <p>Address:</p>
@@ -130,12 +99,13 @@ function Register() {
             <input type='contact' name='contact' value={Reg.contact} onChange={myfunction} />
           </div>
           <div className='col-6 mb-3'>
-            <label htmlFor="gender" value={Reg.gender} onChange={myfunction} name='gender'>Gender:</label>
+              <label htmlFor="gender">Gender:</label>
           </div>
           <div className='col-6 mb-3' >
-            <input name='gender' value="male" onChange={myfunction} type='radio' /> Male
-            <input name='gender' value="female" onChange={myfunction} className='ms-2' type='radio' />Female
+            <input name='gender' type='radio'/>   Male
+            <input name='gender' className='ms-2' type='radio'/>   Female
           </div>
+      
           <div className='col-6'>
             <p>Password:</p>
           </div>
@@ -165,4 +135,5 @@ function Register() {
 }
 
 export default Register
+
 
