@@ -21,11 +21,11 @@ function App() {
     <div>
      <Routes>
       {/* user */}
-      {/* <Route path='/Userlogin' element={[<Userlogin/>]}/>
-      <Route path='/Loginnavbar'element={<Navbar/>}/>
+       <Route path='/Userlogin' element={[<Userlogin/>]}/>
+      {/* <Route path='/Loginnavbar'element={<Navbar/>}/>
       <Route path='/Registerationpage' element={<Register/>}></Route>
       <Route path='/User' element={<UserView/>}></Route>
-      <Route path='/homepage' element={<Petshophomepage/>}></Route>
+      <Route path='/homepage' element={<Petshophomepage/>}></Route> */}
       {/* <Route path='/petss' element={<Viewpets/>}/> */}
       {/* <Route path='forgetpassword' element={<Forget/>}/>
       <Route path='userloginnav' element={<Userloginnabbar/>}/>
@@ -37,7 +37,7 @@ function App() {
 
 
     {/* petshop */}
-    {/* <Route path='/petlogin' element={<Petshoplogin/>}></Route> */}
+    <Route path='/petlogin' element={<Petshoplogin/>}></Route>
     {/* <Route path='/login' element={<Loginpet/>}></Route> */}
     <Route path='/petreg' element={<Petshopreg/>}></Route>
     <Route path='/homepage' element={<Petshophomepage/>}></Route>
