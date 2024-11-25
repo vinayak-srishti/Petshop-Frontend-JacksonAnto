@@ -27,7 +27,7 @@ function Userlogin() {
       axios.post('http://localhost:2024/login',login)
         .then((response) => {
           if(response.data.status==200){
-          alert("logins ucessfuly")
+          alert("login sucessfuly")
           navigate('/homepage')
           console.log(response);
           }
