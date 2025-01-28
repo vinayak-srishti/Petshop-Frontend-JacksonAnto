@@ -5,23 +5,25 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 function Register() {
-  const[Reg,setReg]=useState({
-    firstName:"",
-    lastName:"",
-    email:"",
-    city:"",
-    dateofbirth:"",
-    address:"",
-    pincode:"",
-    contact:"",
-    gender:"",
-    password:"",
-    confirmPassword:""
+
+
+  const navigate=useNavigate()
+  const [Reg, setReg] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    city: "",
+    dateofbirth: "",
+    address: "",
+    pincode: "",
+    contact: "",
+    gender: "",
+    password: "",
+    confirmpassword: ""
 
 
   })
 
-  const navigate=useNavigate()
   const myfunction = ((r) => {
     setReg({
       ...Reg, [r.target.name]: r.target.value
@@ -29,15 +31,44 @@ function Register() {
     console.log(Reg)
   })
 
-  const handleSubmit=(()=>{
-   axios.post('http://localhost:2006/petshopuserregistration',Reg)
-   .then((res)=>{
-console.log(res)
-   })
-   .catch((err)=>{
-    console.log(err)
-   })
-  })
+
+  const handleSubmit = () => {
+    if (!Reg.firstname) {
+      alert("first name required")
+    } else if (!Reg.lastname) {
+      alert('last name required')
+    }
+    else if (!Reg.email) {
+      alert('email required')
+    } else if (!Reg.contact) {
+      alert('contact required')
+    } else if (!Reg.city) {
+      alert('city required')
+    } else if (!Reg.pincode) {
+      alert('pincode required')
+    } else if (!Reg.gender) {
+      alert('gender required')
+    } else if (!Reg.dateofbirth) {
+      alert('date of birth required')
+    } else if (!Reg.address) {
+      alert('address required')
+    } else if(Reg.password!==Reg.confirmpassword){
+      alert("plaese check the password")
+    } else{
+axios.post('http://localhost:2024/petshopuserregistration',Reg)
+.then((response)=>{
+  if(response.data.status==200){
+    alert("registeration sucessfull")
+navigate("/Userlogin")
+
+  }else{
+    alert("Registration failed")
+  }
+
+})
+
+    }
+  }
 
   return (
     <div className='main'>
@@ -48,13 +79,16 @@ console.log(res)
             <p>First Name:</p>
           </div>
           <div className='col-6 input-top'  >
-            <input type='text' placeholder='Enter your name' name='firstName'value={Reg.firstName} onChange={myfunction}/>
+            <input type='text' placeholder='Enter your name' name='firstname' value={Reg.firstname} onChange={myfunction} />
+
           </div>
           <div className='col-6'>
             <p>Last Name:</p>
           </div>
           <div className='col-6' >
-            <input type='text' placeholder='Enter your name' name='lastName' value={Reg.lastName} onChange={myfunction}/>
+
+            <input type='text' placeholder='Enter your name' name='lastname' value={Reg.lastname} onChange={myfunction} />
+
           </div>
           <div className='col-6'>
             <p>Email:</p>
@@ -78,7 +112,9 @@ console.log(res)
             <p>Date of Birth:</p>
           </div>
           <div className='col-6 ' >
-            <input type='date' className='date' name='date of birth' value={Reg.dateofbirth} onChange={myfunction}/>
+
+            <input type='date' className='date' name='dateofbirth' value={Reg.dateofbirth} onChange={myfunction} />
+
           </div>
           <div className='col-6'>
             <p>Address:</p>
@@ -98,14 +134,16 @@ console.log(res)
           <div className='col-6' >
             <input type='contact' name='contact' value={Reg.contact} onChange={myfunction} />
           </div>
-          <div className='col-6 mb-3'>
-              <label htmlFor="gender">Gender:</label>
+         
+          <div className='col-6 mb-3' >
+            <label htmlFor="gender" value={Reg.gender} onChange={myfunction} name='gender'>Gender:</label>
           </div>
           <div className='col-6 mb-3' >
-            <input name='gender' type='radio'/>   Male
-            <input name='gender' className='ms-2' type='radio'/>   Female
+            <input name='gender' value="male" onChange={myfunction} type='radio' />   Male
+            <input name='gender' value="female" onChange={myfunction} className='ms-2' type='radio' />   Female
+
           </div>
-      
+
           <div className='col-6'>
             <p>Password:</p>
           </div>
@@ -115,11 +153,13 @@ console.log(res)
           <div className='col-6'>
             <p>Confirm Password:</p>
           </div>
-          <div className='col-6' >
-            <input type='password' name='confirmPassword' value={Reg.confirmPassword} onChange={myfunction} />
+         
+          <div className='col-6'  >
+            <input type='password' name='confirmpassword' value={Reg.confirmpassword} onChange={myfunction} />
           </div>
           <div className='col-6'  >
-            <button type='button ' onClick={handleSubmitt} className='button_1'>Register</button>
+            <button type='button ' onClick={handleSubmit} className='button_1'>Register</button>
+
           </div>
           <a href=''>Already have account  </a>
 
