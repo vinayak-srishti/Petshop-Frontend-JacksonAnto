@@ -1,0 +1,88 @@
+
+.petshopAdminLogin-page {
+    background-image: url("../../Assets/adminlogin.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+  }
+  
+  
+  .petshopAdminLogin-container {
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 1.4rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+
+  .petshopAdminLogin-title {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: #333333;
+  }
+  
+
+  .petshopAdminLogin-profile-image {
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%; 
+    object-fit: cover;
+    margin-bottom: 1.5rem; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  }
+  
+
+  .petshopAdminLogin-input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+  
+  
+  .petshopAdminLogin-input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    padding-left: 2.5rem; /* Leave space for the icon */
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .petshopAdminLogin-input:focus {
+    border-color: #007bff; 
+  }
+ 
+  .petshopAdminLogin-icon {
+    position: absolute;
+    top: 50%;
+    left: 0.8rem;
+    transform: translateY(-50%);
+    color: #888;
+  }
+  
+
+  .petshopAdminLogin-button {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .petshopAdminLogin-button:hover {
+    background-color: #0056b3; 
+  }
+  

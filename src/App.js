@@ -11,7 +11,9 @@ import Petshoplogin from './Components/Petshop-folder/Petshoplogin';
 import Petshopreg from './Components/Admin/Petshopreg';
 import Petshophomepage from './Components/User/Petshophomepage';
 import Userloginnabbar from './Components/User/Userloginnabbar'
-
+import PetShopAdminLogin from './Components/User/PetshopAdminlogin';
+import DashBoard from './Components/User/DashBoard';
+import Petshopreg from './Components/Admin/Petshopreg';
 
 
 
@@ -26,7 +28,11 @@ function App() {
       <Route path='/Loginnavbar'element={<Navbar/>}/>
       <Route path='/Registerationpage' element={<Register/>}></Route>
       <Route path='/User' element={<UserView/>}></Route>
-      <Route path='/homepage' element={<Petshophomepage/>}></Route> 
+      <Route path='/homepage' element={<Petshophomepage/>}></Route>
+      <Route path='adminlogin' element={<PetShopAdminLogin/>}></Route>
+      <Route path='admindash' element={<DashBoard/>}></Route>
+
+
       {/* <Route path='/petss' element={<Viewpets/>}/> */}
       {/* <Route path='forgetpassword' element={<Forget/>}/>
       <Route path='userloginnav' element={<Userloginnabbar/>}/>
@@ -37,12 +43,14 @@ function App() {
       <Route path='dogpurchase'element={<Dogpurchase/>}/> 
 
 
-    { petshop */}
+
+    
     <Route path='/petlogin' element={<Petshoplogin/>}></Route>
     {/* {/ <Route path='/login' element={<Loginpet/>}></Route> */} 
     <Route path='/petregi' element={<Petshopreg/>}></Route>
     {/* <Route path='/homepage' element={<Petshophomepage/>}></Route> */}
     <Route path='/REGISTER' element={<Register/>}></Route>
+
    
 
 

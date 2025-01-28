@@ -1,31 +1,3 @@
-// import React from 'react'
-// import "./forgetpass.css";
-// import { FaEnvelope } from "react-icons/fa";
-// import logo from "../../Assets/forget.jpg"
-// function Forget() {
-//   return (
-//     <div className='back-groun-forget'>  
-//     <div className='forget-all'>
-// <form> 
-//     <h1>Forget Password</h1>
-//     <label className='forget-label'> email <FaEnvelope scale="5rem"></FaEnvelope></label>
-//     <input type='email' className='forget-password-input' ></input>
-  
-//     <label className='forget-label'>Password</label>
-//     <input type='password'className='forget-password-input'></input>
-//     <label className='forget-label'>Confirm password</label>
-//     <input type='password' className='forget-password-input'></input>
-//     <button className='forget-btn'>update password</button>
-// </form>
-
-//     </div>
-//     </div>
-//   )
-// }
-
-// export default Forget
-
-
 
 import React, { useState } from 'react';
 import { FaEnvelope } from "react-icons/fa";
