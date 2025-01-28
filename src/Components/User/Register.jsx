@@ -5,6 +5,8 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 function Register() {
+
+
   const navigate=useNavigate()
   const [Reg, setReg] = useState({
     firstname: "",
@@ -21,12 +23,14 @@ function Register() {
 
 
   })
+
   const myfunction = ((r) => {
     setReg({
       ...Reg, [r.target.name]: r.target.value
     })
     console.log(Reg)
   })
+
 
   const handleSubmit = () => {
     if (!Reg.firstname) {
@@ -76,12 +80,15 @@ navigate("/Userlogin")
           </div>
           <div className='col-6 input-top'  >
             <input type='text' placeholder='Enter your name' name='firstname' value={Reg.firstname} onChange={myfunction} />
+
           </div>
           <div className='col-6'>
             <p>Last Name:</p>
           </div>
           <div className='col-6' >
+
             <input type='text' placeholder='Enter your name' name='lastname' value={Reg.lastname} onChange={myfunction} />
+
           </div>
           <div className='col-6'>
             <p>Email:</p>
@@ -105,7 +112,9 @@ navigate("/Userlogin")
             <p>Date of Birth:</p>
           </div>
           <div className='col-6 ' >
+
             <input type='date' className='date' name='dateofbirth' value={Reg.dateofbirth} onChange={myfunction} />
+
           </div>
           <div className='col-6'>
             <p>Address:</p>
@@ -125,12 +134,14 @@ navigate("/Userlogin")
           <div className='col-6' >
             <input type='contact' name='contact' value={Reg.contact} onChange={myfunction} />
           </div>
-          <div className='col-6 mb-3'>
+         
+          <div className='col-6 mb-3' >
             <label htmlFor="gender" value={Reg.gender} onChange={myfunction} name='gender'>Gender:</label>
           </div>
           <div className='col-6 mb-3' >
             <input name='gender' value="male" onChange={myfunction} type='radio' />   Male
             <input name='gender' value="female" onChange={myfunction} className='ms-2' type='radio' />   Female
+
           </div>
 
           <div className='col-6'>
@@ -142,11 +153,13 @@ navigate("/Userlogin")
           <div className='col-6'>
             <p>Confirm Password:</p>
           </div>
-          <div className='col-6' >
+         
+          <div className='col-6'  >
             <input type='password' name='confirmpassword' value={Reg.confirmpassword} onChange={myfunction} />
           </div>
           <div className='col-6'  >
             <button type='button ' onClick={handleSubmit} className='button_1'>Register</button>
+
           </div>
           <a href=''>Already have account  </a>
 

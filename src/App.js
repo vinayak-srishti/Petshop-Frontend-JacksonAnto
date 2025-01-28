@@ -7,8 +7,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js"
  import Register from './Components/User/Register'
 import UserView from './Components/User/UserView';
-// import Petshoplogin from './Components/Petshop-folder/Petshoplogin';
-// import Petshopreg from './Components/Admin/Petshopreg';
+import Petshoplogin from './Components/Petshop-folder/Petshoplogin';
+import Petshopreg from './Components/Admin/Petshopreg';
 import Petshophomepage from './Components/User/Petshophomepage';
 import Userloginnabbar from './Components/User/Userloginnabbar'
 import PetShopAdminLogin from './Components/User/PetshopAdminlogin';
@@ -31,6 +31,8 @@ function App() {
       <Route path='/homepage' element={<Petshophomepage/>}></Route>
       <Route path='adminlogin' element={<PetShopAdminLogin/>}></Route>
       <Route path='admindash' element={<DashBoard/>}></Route>
+
+
       {/* <Route path='/petss' element={<Viewpets/>}/> */}
       {/* <Route path='forgetpassword' element={<Forget/>}/>
       <Route path='userloginnav' element={<Userloginnabbar/>}/>
@@ -41,15 +43,14 @@ function App() {
       <Route path='dogpurchase'element={<Dogpurchase/>}/> 
 
 
-    {/* petshop */}
 
+    
+    <Route path='/petlogin' element={<Petshoplogin/>}></Route>
+    {/* {/ <Route path='/login' element={<Loginpet/>}></Route> */} 
+    <Route path='/petregi' element={<Petshopreg/>}></Route>
+    {/* <Route path='/homepage' element={<Petshophomepage/>}></Route> */}
+    <Route path='/REGISTER' element={<Register/>}></Route>
 
-
-    {/* <Route path='/petlogin' element={<Petshoplogin/>}></Route> */}
-    {/* <Route path='/login' element={<Loginpet/>}></Route> */}
-     <Route path='/petreg' element={<Petshopreg/>}></Route> 
-    <Route path='/homepage' element={<Petshophomepage/>}></Route> 
-    {/* <Route path='/REGISTER' element={<Register/>}></Route> */}
    
 
 
