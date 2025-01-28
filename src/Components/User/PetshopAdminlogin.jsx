@@ -1,42 +1,70 @@
-import React from 'react';
-import './PetShopAdminLogin.css'; 
-import { RiUser3Fill, RiLock2Fill } from 'react-icons/ri'; 
+import React, { useState } from 'react';
+import './PetShopAdminLogin.css';
+import { RiUser3Fill, RiLock2Fill } from 'react-icons/ri';
+import profileadmin from "../../Assets/profile admin.jpg";
 
 function PetShopAdminLogin() {
+  const [admin, setAdmin] = useState({
+    username: "",
+    password: ""
+  });
+
  
+  const handleInputChange = (e) => {
+    setAdmin({
+      ...admin,
+      [e.target.name]: e.target.value
+    });
+  };
+
+
+  const loginAdmin = (e) => {
+    e.preventDefault();
+    if (admin.username === "admin123" && admin.password === "password123") {
+      console.log("Login successful!");
+    } else {
+      console.log("Invalid login");
+    }
+  };
+
   return (
     <div className="petshopAdminLogin-page">
-      <div className="petshopAdminLogin-form-container">
-        <form className="petshopAdminLogin-form">
-          <h1>Pet Shop Admin Login</h1>
+      <div className="petshopAdminLogin-container">
+        <form className="petshopAdminLogin-form" onSubmit={loginAdmin}>
+          <h1 className="petshopAdminLogin-title">Pet Shop Admin Login</h1>
+          <img
+            src={profileadmin}
+            alt="Admin Profile"
+            className="petshopAdminLogin-profile-image"
+          />
 
-          {/* Admin Username Input */}
           <div className="petshopAdminLogin-input-group">
-            <input 
-              type="text" 
-              placeholder="Username" 
-              className="petshopAdminLogin-input-field" 
-              required 
+            <input
+              type="text"
+              placeholder="Username"
+              className="petshopAdminLogin-input"
+              name="username"
+              value={admin.username}
+              onChange={handleInputChange}
             />
-            <RiUser3Fill className="petshopAdminLogin-input-icon" />
+            <RiUser3Fill className="petshopAdminLogin-icon" />
           </div>
 
-          {/* Admin Password Input */}
           <div className="petshopAdminLogin-input-group">
-            <input 
-              type="password" 
-              placeholder="Password" 
-              className="petshopAdminLogin-input-field" 
-              required 
+            <input
+              type="password"
+              placeholder="Password"
+              className="petshopAdminLogin-input"
+              name="password"
+              value={admin.password}
+              onChange={handleInputChange}
             />
-            <RiLock2Fill className="petshopAdminLogin-input-icon" />
+            <RiLock2Fill className="petshopAdminLogin-icon" />
           </div>
 
-          {/* Login Button */}
-          <div>
-            <button type="submit" className="petshopAdminLogin-button">Login</button>
-          </div>
-        
+          <button type="submit" className="petshopAdminLogin-button">
+            Login
+          </button>
         </form>
       </div>
     </div>
