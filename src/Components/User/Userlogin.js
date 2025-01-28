@@ -1,8 +1,4 @@
 
-import React from 'react';
-import './Edit.css';  // Ensure the CSS file has styles for the updated class names
-import { RiUser3Fill, RiLock2Fill } from 'react-icons/ri';  // Import icons from react-icons
-
 import React, { useState } from 'react';
 import './Edit.css';
 import { RiUser3Fill, RiLock2Fill } from 'react-icons/ri';
