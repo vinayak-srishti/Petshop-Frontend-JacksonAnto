@@ -1,11 +1,18 @@
 
-.navbar {
+.navbar { 
+  height: 80px;
+  width: 100vw;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
   
   .navbar-brand {
     font-weight: bold;
     font-size: 1.5rem;
+  }
+
+  .navbar-brand img{
+    height: 120px;
+    width: 120px;
   }
   
   .nav-link {
@@ -17,8 +24,9 @@
     color: #007bff;
   }
   
-  .btn-dark {
+  button {
     font-size: 1rem;
     padding: 8px 20px;
+gap: 50px;
   }
   

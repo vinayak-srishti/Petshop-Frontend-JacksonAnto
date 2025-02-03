@@ -12,8 +12,8 @@ function Dashboard() {
       <div className="sidebar">
         <h2>Pet Shop</h2>
         <ul className="top-menu">
-          <li><a href="/">Dashboard</a></li>
-          <li><a href="/petshopregisterrequest">PetshopRegister</a></li>
+          <li><a href="">Dashboard</a></li>
+          <li><a href="petshopreq">PetshopRegister</a></li>
           <li><a href="/inventory">Inventory</a></li>
           <li><a href="/orders">Orders</a></li>
           <li><a href="/customers">Customers</a></li>

@@ -44,7 +44,7 @@ function Petshopreg() {
     } else if (Dio.password!== Dio.confirmpassword) {
       alert(" please check the password")
     } else {
-      axios.post('http://localhost:2024/petregister', Dio)
+      axios.post('http://localhost:3000/petregister', Dio)
         .then((response) => {
           if (response.data.status == 200) {
             alert("registeration successfully")

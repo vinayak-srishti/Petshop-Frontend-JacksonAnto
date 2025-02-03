@@ -1,6 +1,6 @@
 import React from 'react';
 import './Nav.css';
-import logo from "../../Assets/navbar.jpg"; // Example logo (optional)
+import petlogo from "../../Assets/petlogo.png"; // Example logo (optional)
 
 function Navbar() {
   return (
@@ -8,7 +8,7 @@ function Navbar() {
       <div className="container-fluid">
         {/* Navbar Logo and Brand */}
         <a className="navbar-brand" href="#">
-          <img src={logo} alt="Pet Shop Logo" className="navbar-logo" />
+          <img src={petlogo} alt="Pet Shop Logo" className="navbar-logo" />
           Pet Shop
         </a>
 
@@ -39,9 +39,10 @@ function Navbar() {
           {/* Profile Icon and Sign Up Button */}
           <div className="navbar-actions d-flex align-items-center">
             <a href="#" className="icon-profile mx-2">
-              <i className="ri-shield-user-line"></i>
+              <i className="ri-shield-user-line"></i> 
             </a>
-            <button type="button" className="btn btn-dark">Sign Up</button>
+            <button type="button"  className="btn btn-light">♡</button>
+            <button type="button"  className="btn btn-dark">Sign Up</button>
           </div>
         </div>
       </div>
