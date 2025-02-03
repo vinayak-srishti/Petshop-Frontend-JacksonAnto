@@ -82,6 +82,7 @@ const Accept =(id)=>{
                 <td>{el.city} </td>
                 <td><button type="submit" className="butaccept" onClick={()=>Accept(el._id)}>Accept</button></td>
                 <td><button type="submit" className="butreject"  onClick={() => rejectUser(el._id)}>Reject</button></td>
+                {/* HI */}
               </tr>
             )
           })}
