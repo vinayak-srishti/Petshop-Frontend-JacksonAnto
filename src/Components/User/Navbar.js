@@ -41,8 +41,12 @@ function Navbar() {
             <a href="#" className="icon-profile mx-2">
               <i className="ri-shield-user-line"></i> 
             </a>
-            <button type="button"  className="btn btn-light">♡</button>
-            <button type="button"  className="btn btn-dark">Sign Up</button>
+          <div className='signin'>
+          <button type="button"  className="btn btn-dark">Sign In</button>
+          </div>
+          <div className='signup'>
+          <button type="button"  className="btn btn-dark">Sign Up</button>
+          </div>
           </div>
         </div>
       </div>

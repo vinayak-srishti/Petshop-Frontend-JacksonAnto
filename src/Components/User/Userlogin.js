@@ -28,7 +28,7 @@ function Userlogin() {
         .then((response) => {
           if(response.data.status==200){
           alert("login sucessfuly")
-          navigate('/homepage')
+          navigate('/')
           console.log(response);
           }
           else{
@@ -79,7 +79,7 @@ function Userlogin() {
 
           {/* ////login */}
           <div className="register-link">
-            <p>Don't have an account? <a href="#">Register</a></p>
+            <p>Don't have an account? <a href="/">Register</a></p>
           </div>
         </form>
       </div>

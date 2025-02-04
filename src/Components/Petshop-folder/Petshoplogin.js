@@ -2,10 +2,13 @@ import React, { useState } from 'react'
 import "./Petshop.css"
 import "../../Assets/two.jpg"
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 
 
 function Petshoplogin() {
+
+  const navigate=useNavigate()
   const[logins,setLogins]=useState({
     email:"",
     password:""
@@ -26,7 +29,8 @@ function Petshoplogin() {
 
         if(response.data.status==200){
           alert("login sucessfully")
-          
+          navigate('/')
+          console.log(response);          
         }
         else if(response.data.status==404){
           alert("please take the approval from the admin")
@@ -57,7 +61,7 @@ function Petshoplogin() {
             <label><input type="checkbox"/>Remember Me</label>
             <a href="#">Forgot Password</a>
           </div>
-          <button type="submit" class="btn"onClick={petlogin}>Login</button>
+          <button type="submit" class="btn" onClick={petlogin}>Login</button>
           <div class="register-link">
             <p>Dont have an account? <a href="petregi">Register</a></p>
           </div>
