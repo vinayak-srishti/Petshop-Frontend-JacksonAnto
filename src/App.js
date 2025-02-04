@@ -6,8 +6,7 @@ import Navbar from './Components/User/Navbar';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js"
  import Register from './Components/User/Register'
-import UserView from './Components/User/UserView';
-// import Petshoplogin from './Components/Petshop-folder/Petshoplogin';
+import Petshoplogin from './Components/Petshop-folder/Petshoplogin';
 import Petshopreg from './Components/Admin/Petshopreg';
 import Petshophomepage from './Components/User/Petshophomepage';
 // import Userloginnabbar from './Components/User/Userloginnabbar'
@@ -27,7 +26,6 @@ function App() {
       <Route path='/Userlogin' element={[<Userlogin/>]}/>
       <Route path='/Loginnavbar'element={<Navbar/>}/>
       <Route path='/Registerationpage' element={<Register/>}></Route>
-      <Route path='/User' element={<UserView/>}></Route>
       <Route path='/' element={<Petshophomepage/>}></Route>
       <Route path='adminlogin' element={<PetShopAdminLogin/>}></Route>
       <Route path='admindash' element={<DashBoard/>}></Route>
@@ -51,6 +49,7 @@ function App() {
     {/* <Route path='/homepage' element={<Petshophomepage/>}></Route> */}
     <Route path='/REGISTER' element={<Register/>}></Route>
     <Route path='/petshopreq' element={<Petshopreq/>}/><Route/>
+    <Route path='petlogin' element={<Petshoplogin/>}/><Route/>
 
    
 
