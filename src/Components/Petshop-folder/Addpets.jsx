@@ -1,14 +1,11 @@
-import React from 'react'
-import "../Petshop-folder/Addpets.css"
+import React from "react";
+import "../Petshop-folder/Addpets.css";
 
 function Addpets() {
-  return (
-    <div>
-{/* hiii */}
-    </div>
-  )
+  return
+   <div>
+
+  </div>;
 }
 
-export default Addpets
-
- 
+export default Addpets;

@@ -2,21 +2,34 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;   
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .pettable{
     margin: 20px auto;
+    /* text-align: center; */
 }
 
 .pettable table{
     width: 100%;
     border-collapse: collapse;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0,0,0.1);
 }
-.pettable table th,.table td{
-    border: 1px solid #ddd;
-    padding: 8px;
-}
+
+ .pettable th,.pettable td{
+border: 1px solid #ddd;
+padding: 12px;
+text-align: left;
+ }
+
+ .pettable th{
+    background-color:#006400;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+ }
 
 .butaccept{
     background-color: green;
@@ -25,6 +38,8 @@
     border-radius: 4px;
     cursor: pointer;
     margin-left: 20px;
+    width: 90px;
+    height: 40px;
 }
 
 .butreject{
@@ -34,5 +49,7 @@
     border-radius: 4px;
     cursor: pointer;
     margin-left: 20px;
+    width: 90px;
+    height: 40px;
 }
 
