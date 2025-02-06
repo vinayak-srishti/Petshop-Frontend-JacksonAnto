@@ -29,7 +29,7 @@ function Petshoplogin() {
 
         if(response.data.status==200){
           alert("login sucessfully")
-          navigate('/')
+          navigate('petshophomepage')
           console.log(response);          
         }
         else if(response.data.status==404){

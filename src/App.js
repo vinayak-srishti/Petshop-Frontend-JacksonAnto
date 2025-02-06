@@ -29,7 +29,7 @@ function App() {
       <Route path='/Userlogin' element={[<Userlogin/>]}/>
       <Route path='/Loginnavbar'element={<Navbar/>}/>
       <Route path='/Registerationpage' element={<Register/>}></Route>
-      <Route path='/' element={<Petshophomepage/>}></Route>
+      <Route path='/petshophomepage' element={<Petshophomepage/>}></Route>
       <Route path='adminlogin' element={<PetShopAdminLogin/>}></Route>
       <Route path='admindash' element={<DashBoard/>}></Route>
       <Route path='petshopuserhomepage' element={<PetshopUserHompePage/>}></Route>
@@ -54,7 +54,7 @@ function App() {
     {/* <Route path='/homepage' element={<Petshophomepage/>}></Route> */}
     <Route path='/REGISTER' element={<Register/>}></Route>
     <Route path='/petshopreq' element={<Petshopreq/>}/><Route/>
-    <Route path='petlogin' element={<Petshoplogin/>}/><Route/>
+    <Route path='/' element={<Petshoplogin/>}/><Route/>
 
    
 
