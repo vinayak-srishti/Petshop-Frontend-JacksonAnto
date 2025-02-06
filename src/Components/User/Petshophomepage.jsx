@@ -7,6 +7,12 @@ import curus2 from "../../Assets/curus2.jpg";
 import dog1 from "../../Assets/dog1.jpg";
 import dog3 from "../../Assets/dog3.jpg";
 import cat2 from "../../Assets/cat2.jpg";
+import pettreats from "../../Assets/pettreats.jpg";
+import pettoy from "../../Assets/pettoy.webp";
+import dogfood from "../../Assets/dogfood.webp";
+import catfood from "../../Assets/catfood.webp";
+import petcloth from "../../Assets/petcloth.jpeg";
+import petbelt from "../../Assets/petbelt.jpg";
 import hompagedog from "../../Assets/hompagedog.jpg";
 import Navbar from './Navbar';
 
@@ -61,31 +67,39 @@ function Petshophomepage() {
 
       {/* Featured Pets Section */}
       <section className="product-section">
-        <h2 className="section-title">Featured Pets</h2>
+        <h2 className="section-title">SHOP BY STORE</h2>
         <div className="product-container">
           {/* Pet Cards */}
           <div className="product-card">
             <img src={cat2} className="product-image" alt="Pet Cat" />
             <div className="product-details">
-              <h5>Adorable Cats</h5>
+              <h5> Cats</h5>
               <p>Fluffy and friendly felines that will steal your heart.</p>
-              <button className="btn-primary">Buy Now</button>
+              <button className="btn-primary">View Here</button>
             </div>
           </div>
           <div className="product-card">
             <img src={dog3} className="product-image" alt="Pet Dog" />
             <div className="product-details">
-              <h5>Playful Dogs</h5>
+              <h5>Dogs</h5>
               <p>Energetic companions who love to play and cuddle.</p>
-              <button className="btn-primary">Buy Now</button>
+              <button className="btn-primary">View Here</button>
             </div>
           </div>
           <div className="product-card">
-            <img src={dog1} className="product-image" alt="Dog" />
+            <img src={pettreats} className="product-image" alt="Dog" />
             <div className="product-details">
-              <h5>Furry Friends</h5>
+              <h5>Pet Treats</h5>
               <p>Loyal and loving dogs that will be your best friend.</p>
-              <button className="btn-primary">Buy Now</button>
+              <button className="btn-primary">View Here</button>
+            </div>
+          </div>
+          <div className="product-card">
+            <img src={pettoy} className="product-image" alt="Dog" />
+            <div className="product-details">
+              <h5>Pet Toys</h5>
+              <p>Loyal and loving dogs that will be your best friend.</p>
+              <button className="btn-primary">View Here</button>
             </div>
           </div>
         </div>
@@ -93,31 +107,39 @@ function Petshophomepage() {
 
       {/* Accessories Section */}
       <section className="product-section">
-        <h2 className="section-title">Pet Accessories</h2>
+        <h2 className="section-title">Popular Categories</h2>
         <div className="product-container">
           {/* Accessory Cards */}
           <div className="product-card">
-            <img src={curus1} className="product-image" alt="Accessory 1" />
+            <img src={dogfood} className="product-image" alt="Accessory 1" />
             <div className="product-details">
-              <h5>Collars & Leashes</h5>
+              <h5>Dog Food</h5>
               <p>Durable and stylish accessories for your pet.</p>
-              <button className="btn-primary">Shop Now</button>
+              <button className="btn-primary">View Here</button>
             </div>
           </div>
           <div className="product-card">
-            <img src={curus2} className="product-image" alt="Accessory 2" />
+            <img src={catfood} className="product-image" alt="Accessory 1" />
             <div className="product-details">
-              <h5>Pet Toys</h5>
+              <h5>Cat Food</h5>
+              <p>Durable and stylish accessories for your pet.</p>
+              <button className="btn-primary">View Here</button>
+            </div>
+          </div>
+          <div className="product-card">
+            <img src={petcloth} className="product-image" alt="Accessory 2" />
+            <div className="product-details">
+              <h5>Groomig</h5>
               <p>Keep your pet entertained with our fun and safe toys.</p>
-              <button className="btn-primary">Shop Now</button>
+              <button className="btn-primary">View Here</button>
             </div>
           </div>
           <div className="product-card">
-            <img src={cat2} className="product-image" alt="Accessory 3" />
+            <img src={petbelt} className="product-image" alt="Accessory 3" />
             <div className="product-details">
-              <h5>Pet Beds</h5>
+              <h5>Pet Accessories</h5>
               <p>Comfortable beds to ensure your pet gets the best rest.</p>
-              <button className="btn-primary">Shop Now</button>
+              <button className="btn-primary">View Here</button>
             </div>
           </div>
         </div>
