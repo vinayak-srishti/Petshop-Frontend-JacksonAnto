@@ -13,6 +13,9 @@ import Petshophomepage from './Components/User/Petshophomepage';
 import PetShopAdminLogin from './Components/User/PetshopAdminlogin';
 import DashBoard from './Components/User/DashBoard';
 import   Petshopreq  from './Components/User/Petshopreq';
+import PetshopUserHompePage from './Components/Petshop-folder/PetshopUserHompePage';
+import PetShopNavBar from './Components/User/PetShopNavBar';
+import About from './Components/User/About';
 
 
 
@@ -29,7 +32,9 @@ function App() {
       <Route path='/' element={<Petshophomepage/>}></Route>
       <Route path='adminlogin' element={<PetShopAdminLogin/>}></Route>
       <Route path='admindash' element={<DashBoard/>}></Route>
-
+      <Route path='petshopuserhomepage' element={<PetshopUserHompePage/>}></Route>
+      <Route path='petshopnavbar' element={<PetShopNavBar/>}></Route>
+      <Route path='about' element={<About/>}></Route>
 
       {/* <Route path='/petss' element={<Viewpets/>}/> */}
       {/* <Route path='forgetpassword' element={<Forget/>}/>
