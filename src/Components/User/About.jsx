@@ -20,9 +20,8 @@ Wide Selection: Browse our extensive range of pet products – we’ve got every
 Fast, Reliable Shipping: We know you want your pet’s products quickly! Our efficient shipping process ensures fast and reliable delivery, right to your doorstep.
 Expert Recommendations: Not sure what’s best for your pet? We offer expert advice through our detailed product descriptions and helpful resources to guide your choices.
 Customer-Centered Service: Our customer service team is always here to assist you, ensuring that every shopping experience is smooth and enjoyable.
-At PetsHOP, our mission is simple: to make your pet’s life as happy and healthy as possible, with the convenience of online shopping. Thank you for choosing us – we’re excited to help you spoil your pets with the best products on the market!
-
-
+At PetsHOP, our mission is simple: to make your pet’s life as happy fkjh and healthy as possible, with the convenience of online shopping. Thank you for choosing us – we’re excited to help you spoil your pets with the best products on the market!
+{/* hhhhh */}
         </p>
     </div>
   )
