@@ -13,6 +13,13 @@ function Addpets() {
     console.log({
       petname,petimage,petcategory,petprice
     })
+
+    const handleImageChange = (event)=>{
+      const file  = event.target.files[0]
+      if (file){
+        SetPetImage(file)
+      }
+    }
     
   }
   return (
@@ -53,8 +60,7 @@ function Addpets() {
       </form>
 
     </div>
-  // cghjbknlghj
-  // vhgjhkl
+ 
   )
 }
 
