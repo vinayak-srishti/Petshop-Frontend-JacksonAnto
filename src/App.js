@@ -16,6 +16,7 @@ import   Petshopreq  from './Components/User/Petshopreq';
 import PetshopUserHompePage from './Components/Petshop-folder/PetshopUserHompePage';
 import PetShopNavBar from './Components/User/PetShopNavBar';
 import About from './Components/User/About';
+import Addpets from './Components/Petshop-folder/Addpets';
 
 
 
@@ -35,6 +36,7 @@ function App() {
       <Route path='petshopuserhomepage' element={<PetshopUserHompePage/>}></Route>
       <Route path='petshopnavbar' element={<PetShopNavBar/>}></Route>
       <Route path='about' element={<About/>}></Route>
+      <Route path='addpet'element={<Addpets/>}></Route>
 
       {/* <Route path='/petss' element={<Viewpets/>}/> */}
       {/* <Route path='forgetpassword' element={<Forget/>}/>
