@@ -7,7 +7,7 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-light bg-light nav-bar">
       <div className="container-fluid">
         {/* Navbar Logo and Brand */}
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="https://en.wikipedia.org/wiki/Cat%E2%80%93dog_relationship">
           <img src={petlogo} alt="Pet Shop Logo" className="navbar-logo" />
           Pet Shop
         </a>
