@@ -1,0 +1,25 @@
+/* *{
+padding: 0;
+width: 0;
+} */
+
+/* .mainhome{
+    height: 100vh;
+    width: 100vw;
+} */
+
+.mainhome-bg{
+    margin-top: 30px;
+    height: 400px;
+    width: 100vw;
+}
+
+.mainhome-bg video{
+    height: 400px;
+    width: 100vw;
+}
+
+.mainhome-bg img{
+    height: 400px;
+    width: 100vw;
+}
