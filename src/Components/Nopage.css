@@ -1,0 +1,14 @@
+.nopage-container {
+      height: 100vh;
+  width: 100vw;
+  text-align: center;
+  
+  background-color: black;
+
+}
+
+.nopage-container h1 {
+  color: red;
+ padding-top: 250px;
+ font-size: 200px;
+}

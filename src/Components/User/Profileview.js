@@ -36,7 +36,7 @@ function Profileview() {
                         <dd>7502812184</dd>
                     </div>
                 </dl>
-                <button className='edit-button'>Edit</button>
+                <button className='edit-button' >Edit</button>
             </div>
         </div>
     );
