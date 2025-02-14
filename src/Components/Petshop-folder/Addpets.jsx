@@ -9,11 +9,13 @@ function Addpets() {
 
   const handlePets = (e) => {
     e.preventDefault()
+    
     console.log({
       petname,
       petimage,
       petcategory,
       petprice
+      
     })
   }
 

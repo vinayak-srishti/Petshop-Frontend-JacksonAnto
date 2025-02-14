@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 function Register() {
 
 
-  const navigate=useNavigate()
+  const navigate=useNavigate() 
   const [Reg, setReg] = useState({
     firstname: "",
     lastname: "",
