@@ -28,8 +28,8 @@ function App() {
     <BrowserRouter>
       <div>
         <Routes>
-          {/* user */}
-          <Route path="/" element={<Petshoplogin />} />
+          {/* user */}  
+ <Route path="/" element={<Mainhomepage/>}/>
           <Route />
 
           <Route path="/*" element={<Nopage />} />
@@ -69,7 +69,7 @@ function App() {
           <Route />
           <Route path="profileview" element={<Profileview />} />
           <Route path="navbar2" element={<Navbar2/>}/>
-          <Route path="mainhomepage" element={<Mainhomepage/>}/>
+                 <Route path="petshoplogin" element={<Petshoplogin />} />
           <Route path="mainnavbar" element={<MainNavbar/>}/>
         </Routes>
       </div>
