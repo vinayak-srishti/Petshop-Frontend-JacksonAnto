@@ -1,0 +1,65 @@
+.add-pets {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .add-pets h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .form-addpets, .pet-price, .add-pets select {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input, select {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  input[type="file"] {
+    border: none;
+  }
+  
+  .image-preview {
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .image-preview img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 10px;
+  }
+  
+ .addpetbutton{
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .addpetbutton:hover {
+    background: #218838;
+  }
+  

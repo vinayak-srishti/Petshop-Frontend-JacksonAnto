@@ -1,0 +1,16 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .khLogo{
+    height: 150px;
+    width: 150px;
+    cursor: pointer;
+  }
+  
+  .navbar-collapse .navbar-nav .active{
+    color: #008080; /* Teal */
+  }
+  
