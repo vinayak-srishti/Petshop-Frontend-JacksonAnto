@@ -22,6 +22,7 @@ import Mainhomepage from "./Components/Mainhomepage";
 import Nopage from "./Components/Nopage";
 import Navbar2 from "./Components/Navbar2";
 import MainNavbar from "./Components/MainNavbar";
+import AddCart from "./Components/Petshop-folder/AddCart";
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
           <Route path="about" element={<About />}></Route>
           <Route path="addpet" element={<Addpets />}></Route>
           <Route path="/dogview/:id" element={<Dogview />}></Route>
+          <Route path="/addcart" element={<AddCart/>}></Route>
 
           {/* <Route path='/petss' element={<Viewpets/>}/> */}
           {/* <Route path='forgetpassword' element={<Forget/>}/>
