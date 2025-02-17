@@ -55,7 +55,7 @@ function Register() {
     } else if(Reg.password!==Reg.confirmpassword){
       alert("plaese check the password")
     } else{
-axios.post('http://localhost:2024/petshopuserregistration',Reg)
+axios.post('http://localhost:4000/petshopuserregisteration',Reg)
 .then((response)=>{
   if(response.data.status==200){
     alert("registeration sucessfull")
