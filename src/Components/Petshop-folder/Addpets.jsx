@@ -12,6 +12,12 @@ function AddPets() {
     imagePreview: "",
   });
 
+
+  const handlePets = (e) => {
+    e.preventDefault()
+    
+  
+  }
   const handleFunction = (u) => {
     const { name, value } = u.target;
     setData((prevData) => ({
