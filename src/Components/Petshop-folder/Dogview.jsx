@@ -34,7 +34,7 @@ function Dogview() {
                 <h5 class="card-title">Name: {pet.Productname}</h5>
                 <p class="card-text">Category: {pet.Productcategory}</p>
                 <p class="card-text">Price₹: {pet.price}</p>
-                {/* <p class="card-text">Price₹: {pet.productdetail}</p> */}
+                {/* <p class="card-text">Price₹: {pet.productdetail}</p> hai*/}
                 <a href="#" class="btn btn-primarys">
                   Go somewhere
                 </a>
