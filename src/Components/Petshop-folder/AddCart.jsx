@@ -1,6 +1,7 @@
 import React from 'react'
 
 const AddCart = () => {
+
   return (
   <div>
     <div class="card">
