@@ -30,7 +30,7 @@ function Userlogin() {
           console.log(response);
           if (response.data.status == 200) {
             localStorage.setItem("userid",response.data.data._id)
-            // console.log(response.data.data._id+"Userid");
+            console.log(response.data.data._id+"Userid");
 
             alert("login sucessfuly");
             // navigate('/')
