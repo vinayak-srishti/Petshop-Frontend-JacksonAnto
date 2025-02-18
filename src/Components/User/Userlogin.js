@@ -27,8 +27,9 @@ function Userlogin() {
         .then((response) => {
           console.log(response);
           if (response.data.status == 200) {
-            localStorage.setItem("userid",response.data.data._id)
+            // localStorage.setItem("userid",response.data.data._id)
             // console.log(response.data.data._id+"Userid");
+            console.log(window.localStorage);
 
             alert("login sucessfuly");
             // navigate('/')

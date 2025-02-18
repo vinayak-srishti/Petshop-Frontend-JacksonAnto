@@ -65,5 +65,4 @@ axios.post("http://localhost:4000/savecart",cart)
     </div>
   );
 }
-// bhbadehghwh
 export default Dogview;
