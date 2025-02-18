@@ -10,7 +10,7 @@ function Dogview() {
 
   useEffect(() => {
     axios
-      .post("http://localhost:3000/viewdog", { id })
+      .post("http://localhost:4000/viewdog", { id })
 
       .then((res) => {
         console.log(res);
@@ -29,7 +29,7 @@ function Dogview() {
             
           return (
             <div class="card width: 10rem;">
-              <img src={`http://localhost:3000/${pet.image.filename}`} class="card-img-top" alt="..." />
+              <img src={`http://localhost:4000/${pet.image.filename}`} class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title">Name: {pet.Productname}</h5>
                 <p class="card-text">Category: {pet.Productcategory}</p>
