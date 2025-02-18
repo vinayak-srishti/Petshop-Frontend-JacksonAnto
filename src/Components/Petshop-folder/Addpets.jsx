@@ -55,7 +55,7 @@ function AddPets() {
     console.log(formData);
 
     axios
-      .post("http://localhost:3000/addproduct", formData, {
+      .post("http://localhost:4000/addproduct", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
