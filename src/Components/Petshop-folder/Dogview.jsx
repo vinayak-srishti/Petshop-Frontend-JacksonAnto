@@ -4,12 +4,13 @@ import { useParams } from "react-router-dom";
 import "../../Components/Petshop-folder/Dogview.css";
 
 function Dogview() {
-  // const userid=(localStorage.getItem("userid"))
+  const userid=(localStorage.getItem("userid"))
+  console.log(userid);
 
   const [data, setData] = useState([]);
   const { id } = useParams();
   const[cart,setCart]=useState({
-    userId:6666666,
+    userId:userid,
     productId:""
   })
   
@@ -39,32 +40,6 @@ axios.post("http://localhost:4000/savecart",cart)
   })
 
   return (
-
-    <div className="container">
-      <div className="row">
-        {data.map((pet, i) => {
-            // console.log(pet.image.filename);
-            
-          return (
-            <div class="card width: 10rem;">
-              <img src={`http://localhost:4000/${pet.image.filename}`} class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Name: {pet.Productname}</h5>
-                <p class="card-text">Category: {pet.Productcategory}</p>
-                <p class="card-text">Price₹: {pet.price}</p>
-                {/* <p class="card-text">Price₹: {pet.productdetail}</p> hai*/}
-                <a href="#" class="btn btn-primarys">
-                  Go somewhere
-                </a>
-              </div>
-              {/* <button
-                onClick={() => {
-                  console.log(data);
-                }}
-              >
-                click
-              </button> */}
-
     <div className="dogview-container">
       <div className="dogview-row">
         {data.map((pet, i) => (
@@ -84,7 +59,6 @@ axios.post("http://localhost:4000/savecart",cart)
               <a href="#" className="dogview-buy">
    Buy Now
               </a>
-
             </div>
           </div>
         ))}
@@ -92,5 +66,4 @@ axios.post("http://localhost:4000/savecart",cart)
     </div>
   );
 }
-// bhbadehghwh
 export default Dogview;
