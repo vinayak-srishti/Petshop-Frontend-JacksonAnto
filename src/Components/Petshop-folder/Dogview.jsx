@@ -2,19 +2,15 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../../Components/Petshop-folder/Dogview.css";
+import Navbar from "../User/Navbar";
 
 function Dogview() {
-  const userid=(localStorage.getItem("userid"))
+  const userid = localStorage.getItem("userid");
   console.log(userid);
 
   const [data, setData] = useState([]);
   const { id } = useParams();
-  const[cart,setCart]=useState({
-    userId:userid,
-    productId:""
-  })
   
-
   useEffect(() => {
     axios
       .post("http://localhost:4000/viewdog", { id })
@@ -27,20 +23,31 @@ function Dogview() {
       });
   }, [id]);
 
-  const AddtoCart=((id)=>{
-axios.post("http://localhost:4000/savecart",cart)
-.then((res)=>{
-  console.log(res);
-  setCart(res.data.data) 
-})
-.catch((err)=>{
-  console.log(err);
-  
-})
-  })
+  const AddtoCart = (productId) => {
+    const cartItem = {
+      userId: userid,
+      productId: productId, 
+    };
+
+    axios.post("http://localhost:4000/savecart", cartItem)
+      .then((response) => {
+        console.log(response);
+        if (response.data.status==200){
+          alert(" Selected Item Added to Cart")
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+
 
   return (
     <div className="dogview-container">
+      <div className="dogview-navbar">
+        <Navbar />
+      </div>
       <div className="dogview-row">
         {data.map((pet, i) => (
           <div key={i} className="dogview-card">
@@ -53,12 +60,12 @@ axios.post("http://localhost:4000/savecart",cart)
               <h5 className="dogview-card-title">Name: {pet.Productname}</h5>
               <p className="dogview-card-text">Category: {pet.Productcategory}</p>
               <p className="dogview-card-text">Price₹: {pet.price}</p>
-              <a href="#" className="dogview-btn" onClick={AddtoCart} >
-    Add To Cart
-              </a>
-              <a href="#" className="dogview-buy">
-   Buy Now
-              </a>
+              <button className="dogview-btn" onClick={() => AddtoCart(pet._id)}>
+                Add to Cart
+              </button>
+              {/* <a href="#" className="dogview-buy">
+                Buy Now
+              </a> */}
             </div>
           </div>
         ))}
@@ -66,4 +73,5 @@ axios.post("http://localhost:4000/savecart",cart)
     </div>
   );
 }
+
 export default Dogview;

@@ -23,6 +23,8 @@ import Nopage from "./Components/Nopage";
 import Navbar2 from "./Components/Navbar2";
 import MainNavbar from "./Components/MainNavbar";
 import AddCart from "./Components/Petshop-folder/AddCart";
+import 'remixicon/fonts/remixicon.css'
+import Buy from "./Components/User/Buy";
 
 function App() {
   return (
@@ -41,7 +43,7 @@ function App() {
           <Route path="adminlogin" element={<PetShopAdminLogin />}></Route>
           <Route path="admindash" element={<DashBoard />}></Route>
           <Route
-            path="petshopuserhomepage"
+            path="/petshopuserhomepage"
             element={<PetshopUserHompePage />}
           ></Route>
           <Route path="petshopnavbar" element={<PetShopNavBar />}></Route>
@@ -55,7 +57,7 @@ function App() {
       <Route path='userloginnav' element={<Userloginnabbar/>}/>
      
       <Route path='edituser' element={<Edituser/>}/>
-      <Route path='buy'element={<Buy/>}/>
+     
       <Route path='purchase'element={<Purchase/>}/>
       <Route path='dogpurchase'element={<Dogpurchase/>}/> 
 
@@ -73,6 +75,7 @@ function App() {
           <Route path="navbar2" element={<Navbar2 />} />
           <Route path="petshoplogin" element={<Petshoplogin />} />
           <Route path="mainnavbar" element={<MainNavbar />} />
+          <Route path='buy 'element={<Buy/>}/>
         </Routes>
       </div>
     </BrowserRouter>

@@ -33,7 +33,7 @@ function Userlogin() {
             console.log(response.data.data._id+"Userid");
 
             alert("login sucessfuly");
-            // navigate('/')
+            navigate('/petshophomepage')
           } else {
             alert(response.data.msg);
           }

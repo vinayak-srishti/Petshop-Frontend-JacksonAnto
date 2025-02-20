@@ -1,8 +1,10 @@
 import React from 'react';
 import './Nav.css';
 import petlogo from "../../Assets/petlogo.png"; // Example logo (optional)
+import { useNavigate } from 'react-router-dom';
 
 function Navbar() {
+  const navigate=useNavigate()
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light nav-bar">
       <div className="container-fluid">
@@ -38,15 +40,17 @@ function Navbar() {
           
           {/* Profile Icon and Sign Up Button */}
           <div className="navbar-actions d-flex align-items-center">
-            <a href="#" className="icon-profile mx-2">
+            {/* <a href="#" className="icon-profile mx-2">
               <i className="ri-shield-user-line"></i> 
-            </a>
+            </a> */}
           <div className='signin'>
-          <button type="button"  className="btn btn-dark">Sign In</button>
+          <button type="button"  className="btn btn-dark" onClick={()=>{
+            navigate("/addcart")
+          }} ><i class="ri-shopping-cart-line"></i></button>
           </div>
           <div className='signup'>
             
-          <button type="butt`on"  className="btn btn-dark">Sign Up</button>
+          <button type="butt`on"  className="btn btn-dark"><i class="ri-logout-box-r-line"></i> </button>
           
           </div>
           </div>
