@@ -48,7 +48,7 @@ function App() {
           <Route path="about" element={<About />}></Route>
           <Route path="addpet" element={<Addpets />}></Route>
           <Route path="/dogview/:id" element={<Dogview />}></Route>
-          <Route path="/addcart" element={<AddCart/>}></Route>
+          <Route path="/addcart" element={<AddCart />}></Route>
 
           {/* <Route path='/petss' element={<Viewpets/>}/> */}
           {/* <Route path='forgetpassword' element={<Forget/>}/>
