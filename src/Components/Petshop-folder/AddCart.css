@@ -1,0 +1,155 @@
+/* General Styling */
+.addcart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.addcart-main {
+  display: flex;
+  margin-right: 500px;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 50%;
+  height: 250px;
+  max-width: 800px;
+  gap: 15px;
+}
+
+/* .addcart-main:hover{
+  background-color: gray;
+} */
+
+/* Image Styling */
+.addcart-img-top {
+  width: 300px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Cart Body */
+.addcart-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Header with Name & Delete Button */
+.addcart-header {
+margin-top: 30PX;
+}
+
+.addcartdelete-container {
+  display: flex;
+  /* margin-left: 300px; */
+  /* margin-top: 10px; */
+  /* margin-bottom: 10px; */
+}
+
+.addcart-buynow{
+  height: 40px;
+  width: 80px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: red;
+  margin-right: 280px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+.addcart-buynow:hover{
+  background-color: #e60000;
+  transform: scale(1.1);
+}
+
+
+
+.addcartdelete-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin-top: 20px;
+  background-color: red;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.addcartdelete-btn:hover {
+  background-color: #e60000;
+  transform: scale(1.1);
+}
+
+.addcartdelete-btn i {
+  font-size: 25px;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+/* Price */
+.price {
+  font-size:25px;
+  /* font-weight: bold; */
+  margin-top: 20PX;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .addcart-main {
+    flex-direction: column;
+    width: 90%;
+    text-align: center;
+  }
+
+  .addcart-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .addcart-quantitys {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .addcart-main {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .addcart-img-top {
+    width: 100px;
+    height: 100px;
+  }
+
+  .addcartdelete-btn {
+    width: 35px;
+    height: 35px;
+    margin-top: 110px;
+  }
+
+  .addcart-quantitys button {
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+  }
+
+  .addcart-quantitys input {
+    width: 35px;
+  }
+}

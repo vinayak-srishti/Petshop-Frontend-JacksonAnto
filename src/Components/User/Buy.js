@@ -1,36 +1,37 @@
-import React from 'react'
-import curus2 from "../../Assets/curus2.jpg"
+import React, { useState } from "react";
+import "../../Components/User/Buy.css";
 
-import "./Buy.css"
 function Buy() {
-    return (
-
-        <div className='container'>
-            <div className='row'>
-                <div className='col-8'>
-
-                    <div className='buy-img'>
-                        <div class="card" style={{ width: "50rem" }}>
-                            <img src={curus2} class="card-img-top" alt="..." />
-
-                        </div>
-                        
-                    </div>
-                </div>
-                <div className='col-4' >
-                    <div className='heading-buy'>
-                    <h1>Dog</h1>
-                    <p>Name:lab<br/>
-                    Age:1<br/>
-                    Breed:american
-                    </p>
-                    </div>
-                            
-                        </div>
-            </div>
-
+    // const userId=localStorage.getItem("userId")
+    // console.log(userId);
+    
+  const [count, setCount] = useState(0);
+  const increment = () => {
+    setCount(count + 1);
+  };
+// 
+  const decrement = () => {
+    setCount(count - 1);
+  };
+  return (
+    <div className="buynow">
+      <div class="buynowcard">
+        <img src="..." class="buynowcard-img-top" alt="..." />
+        <div class="buynowcard-body">
+          <h5 class="buynowcard-title">Card title</h5>
+          <div className="buynow-quantitys">
+            <h3>Quantity</h3>
+            <button onClick={decrement}>-</button>
+            <input type="text" value={count} />
+            <button onClick={increment}>+</button>
+          </div>
+          <a href="#" class="btn btn-primary">
+            Order Conformed
+          </a>
         </div>
-    )
+      </div>
+    </div>
+  );
 }
 
-export default Buy
+export default Buy;

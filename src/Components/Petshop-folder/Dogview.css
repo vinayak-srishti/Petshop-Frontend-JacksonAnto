@@ -1,11 +1,12 @@
 .dogview-container {
-  padding: 90px;
+  padding-top: 10px;
 }
 
 .dogview-row {
   display: flex;
   flex-wrap: wrap;
   gap: 60px;
+  margin: 90px;
 }
 
 .dogview-card {
@@ -42,7 +43,7 @@
 }
 
 .dogview-btn {
-  background-color: #007bff;
+  background-color: goldenrod;
   color: white;
   padding: 10px;
   border: none;
@@ -66,7 +67,7 @@
 }
 
 .dogview-btn:hover {
-  background-color: #0056b3;
+  background-color: rgb(170, 146, 7);
 }
 .dogview-buy:hover {
   background-color: rgb(152, 22, 22);

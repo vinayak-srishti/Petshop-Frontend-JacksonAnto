@@ -84,8 +84,14 @@
     color: #555;
   }
   
-  .btn-primary {
+  .btn-primarys {
     background-color: #f0a500;
     color: white;
-    padding: 10px
+    padding: 10px;
+    border:none;
+    border-radius: 10px;
   }  
+
+  .btn-primarys:hover{
+    background-color: red;
+  }

@@ -25,10 +25,13 @@
 
 .signin{
   font-size: 1rem;
-  padding: 8px 20px
+  background-color: black;
+  /* padding: 8px 20px */
+  border-radius: 5px;
 }
 
 .signup{
   font-size: 1rem;
-  padding: 8px 20px;
+  padding: 40px;
+  border-radius: 5px;
 }

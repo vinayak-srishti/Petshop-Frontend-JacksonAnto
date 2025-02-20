@@ -19,20 +19,21 @@ function Userlogin() {
     console.log(login);
   };
 
+
   const changelogin = (e) => {
     e.preventDefault();
     if ((login.email, login.password)) {
       axios
         .post("http://localhost:4000/login", login)
+
         .then((response) => {
           console.log(response);
           if (response.data.status == 200) {
-            // localStorage.setItem("userid",response.data.data._id)
-            // console.log(response.data.data._id+"Userid");
-            console.log(window.localStorage);
+            localStorage.setItem("userid",response.data.data._id)
+            console.log(response.data.data._id+"Userid");
 
             alert("login sucessfuly");
-            // navigate('/')
+            navigate('/petshophomepage')
           } else {
             alert(response.data.msg);
           }

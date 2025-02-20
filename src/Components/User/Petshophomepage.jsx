@@ -82,7 +82,7 @@ function Petshophomepage({ data }) {
               <p>Fluffy and friendly felines that will steal your heart.</p>
               <Link to={`/dogview/${(data = "cat")}`}>
                 {" "}
-                <button className="btn-primary">View Here</button>
+                <button className="btn-primarys">View Here</button>
               </Link>
             </div>
           </div>
@@ -93,7 +93,7 @@ function Petshophomepage({ data }) {
               <p>Energetic companions who love to play and cuddle.</p>
               <Link to={`/dogview/${(data = "dog")}`}>
                 {" "}
-                <button className="btn-primary">View Here</button>
+                <button className="btn-primarys">View Here</button>
               </Link>
             </div>
           </div>
@@ -104,7 +104,7 @@ function Petshophomepage({ data }) {
               <p>Loyal and loving dogs that will be your best friend.</p>
               <Link to={`/dogview/${(data = "pet treats")}`}>
                 {" "}
-                <button className="btn-primary">View Here</button>
+                <button className="btn-primarys">View Here</button>
               </Link>
             </div>
           </div>
@@ -115,7 +115,7 @@ function Petshophomepage({ data }) {
               <p>Loyal and loving dogs that will be your best friend.</p>
               <Link to={`/dogview/${(data = "pet toy")}`}>
                 {" "}
-                <button className="btn-primary">View Here</button>
+                <button className="btn-primarys">View Here</button>
               </Link>
             </div>
           </div>
@@ -134,7 +134,7 @@ function Petshophomepage({ data }) {
               <p>Durable and stylish accessories for your pet.</p>
               <Link to={`/dogview/${(data = "dog food")}`}>
                 {" "}
-                <button className="btn-primary">View Here</button>
+                <button className="btn-primarys">View Here</button>
               </Link>
             </div>
           </div>
@@ -144,7 +144,7 @@ function Petshophomepage({ data }) {
               <h5>Cat Food</h5>
               <p>Durable and stylish accessories for your pet.</p>
               <Link to={`/dogview/${(data = "cat food")}`}>
-                <button className="btn-primary">View Here</button>
+                <button className="btn-primarys">View Here</button>
               </Link>
             </div>
           </div>
@@ -154,7 +154,7 @@ function Petshophomepage({ data }) {
               <h5>Groomig</h5>
               <p>Keep your pet entertained with our fun and safe toys.</p>
               <Link to={`/dogview/${(data = "grooming")}`}>
-                <button className="btn-primary">View Here</button>
+                <button className="btn-primarys">View Here</button>
               </Link>
             </div>
           </div>
@@ -164,7 +164,7 @@ function Petshophomepage({ data }) {
               <h5>Pet Accessories</h5>
               <p>Comfortable beds to ensure your pet gets the best rest.</p>
               <Link to={`/dogview/${(data = "accessories")}`}>
-                <button className="btn-primary">View Here</button>
+                <button className="btn-primarys">View Here</button>
               </Link>
             </div>
           </div>
