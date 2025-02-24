@@ -1,0 +1,81 @@
+/* Order.css */
+
+.order {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #cfa409;
+  }
+  
+  .order-container {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .order-form-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .order-form-control,
+  .order-form-select {
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ced4da;
+    font-size: 16px;
+  }
+  
+  .order-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .order-col {
+    flex: 1;
+  }
+  
+  .order-col-md-6,
+  .order-col-md-4,
+  .order-col-md-2 {
+    margin-bottom: 15px;
+  }
+  
+  .order-col-12 {
+    margin-bottom: 20px;
+  }
+  
+  .order-btn-success {
+    background-color: #28a745;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  .order-btn-success:hover {
+    background-color: #218838;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .order-container {
+      max-width: 90%;
+    }
+  
+    .order-row {
+      flex-direction: column;
+    }
+  }
+  

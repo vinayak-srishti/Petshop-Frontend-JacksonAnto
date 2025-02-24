@@ -5,7 +5,7 @@
 .dogview-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 60px;
+  gap: 50px;
   margin: 90px;
 }
 

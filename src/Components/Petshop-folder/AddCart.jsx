@@ -1,20 +1,12 @@
 import axios from "axios";
 import "../../Components/Petshop-folder/AddCart.css";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const AddCart = () => {
   const [data, setData] = useState([]);
-  const [count, setCount] = useState(0);
   const userid = localStorage.getItem("userid");
   console.log(userid);
-
-  const increment = () => {
-    setCount(count + 1);
-  };
-
-  const decrement = () => {
-    setCount(count - 1);
-  };
 
   useEffect(() => {
     axios
@@ -46,7 +38,6 @@ const AddCart = () => {
     }
   };
 
-
   console.log(data);
 
   return (
@@ -64,9 +55,9 @@ const AddCart = () => {
                 <h3>Name: {cart?.productId?.Productname}</h3>
                 <h3 className="price">Price:{cart?.productId?.price}</h3>
               </div>
-             
+
               <div className="addcartdelete-container">
-                <button className="addcart-buynow">Buy Now</button>
+             <Link to={`/purchaseproduct/${cart?.productId?._id}`}>  <button className="addcart-buynow">Buy Now</button></Link> 
                 <span
                   className="addcartdelete-btn"
                   onClick={() => handleDelete(cart._id)}
