@@ -5,11 +5,12 @@
   align-items: center;
   width: 100%;
   padding: 10px;
+  background-color: bisque;
 }
 
 .addcart-main {
   display: flex;
-  margin-right: 500px;
+  /* margin-right: 500px; */
   flex-direction: row;
   align-items: center;
   background-color: #fff;
@@ -61,7 +62,7 @@ margin-top: 30PX;
   border-radius: 10px;
   color: white;
   background-color: red;
-  margin-right: 280px;
+  margin-right: 250px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }

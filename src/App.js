@@ -25,6 +25,7 @@ import MainNavbar from "./Components/MainNavbar";
 import AddCart from "./Components/Petshop-folder/AddCart";
 import 'remixicon/fonts/remixicon.css'
 import Buy from "./Components/User/Buy";
+import Order from "./Components/Order";
 
 function App() {
   return (
@@ -75,7 +76,8 @@ function App() {
           <Route path="navbar2" element={<Navbar2 />} />
           <Route path="petshoplogin" element={<Petshoplogin />} />
           <Route path="mainnavbar" element={<MainNavbar />} />
-          <Route path='buy 'element={<Buy/>}/>
+          <Route path='/purchaseproduct/:id'element={<Buy/>}/>
+          <Route path="order" element={<Order/>}/>
         </Routes>
       </div>
     </BrowserRouter>
