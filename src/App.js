@@ -11,6 +11,7 @@ import Petshopreg from "./Components/Admin/Petshopreg";
 import Petshophomepage from "./Components/User/Petshophomepage";
 // import Userloginnabbar from './Components/User/Userloginnabbar'
 import PetShopAdminLogin from "./Components/User/PetshopAdminlogin";
+import Forget from "./Components/User/Forget";
 import DashBoard from "./Components/User/DashBoard";
 import Petshopreq from "./Components/User/Petshopreq";
 import PetshopUserHompePage from "./Components/Petshop-folder/PetshopUserHompePage";
@@ -54,7 +55,7 @@ function App() {
           <Route path="/addcart" element={<AddCart/>}></Route>
 
           {/* <Route path='/petss' element={<Viewpets/>}/> */}
-          {/* <Route path='forgetpassword' element={<Forget/>}/>
+          {/* />
       <Route path='userloginnav' element={<Userloginnabbar/>}/>
      
       <Route path='edituser' element={<Edituser/>}/>
@@ -78,6 +79,7 @@ function App() {
           <Route path="mainnavbar" element={<MainNavbar />} />
           <Route path='/purchaseproduct/:id'element={<Buy/>}/>
           <Route path="order" element={<Order/>}/>
+          <Route path='forgetpassword' element={<Forget/>}/>
         </Routes>
       </div>
     </BrowserRouter>

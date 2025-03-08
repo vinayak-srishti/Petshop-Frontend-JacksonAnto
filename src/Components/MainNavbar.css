@@ -14,3 +14,36 @@
     color: #008080; /* Teal */
   }
   
+  /* Container Styling */
+.custom-buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Content */
+.custom-modal-content {
+  border-radius: 12px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Login Buttons */
+.custom-login-btn {
+  width: 100%;
+  margin: 10px 0;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.navlogin img{
+  height: 150px;
+  width: 150px;
+}
+
+.navlogin button{
+  margin-bottom: 20px;
+}
+

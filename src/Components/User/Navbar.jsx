@@ -5,6 +5,12 @@ import { useNavigate } from 'react-router-dom';
 
 function Navbar() {
   const navigate=useNavigate()
+
+  const handleLogout =()=>{
+    localStorage.removeItem("userid")
+    alert("Are you want to logout")
+    navigate("/")
+  }
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light nav-bar">
       <div className="container-fluid">
@@ -50,7 +56,7 @@ function Navbar() {
           </div>
           <div className='signup'>
             
-          <button type="butt`on"  className="btn btn-dark"><i class="ri-logout-box-r-line"></i> </button>
+          <button type="butt`on"  className="btn btn-dark" onClick={handleLogout}><i class="ri-logout-box-r-line"></i> </button>
           
           </div>
           </div>
