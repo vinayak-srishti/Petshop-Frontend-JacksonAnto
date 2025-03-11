@@ -1,0 +1,70 @@
+.customer {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .customer-table {
+    width: 90%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  
+  }
+  
+  .customer-table thead {
+    background:red;
+    color: white; 
+  }
+  
+  .customer-table th,
+  .customer-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .customer-table tbody tr:hover {
+    background: #f1f1f1;
+  }
+  
+  .butaccept {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .butreject {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .butaccept:hover {
+    background: #218838;
+  }
+  
+  .butreject:hover {
+    background: #c82333;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .customer-table {
+      width: 100%;
+    }
+  
+    .customer-table th,
+    .customer-table td {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+  

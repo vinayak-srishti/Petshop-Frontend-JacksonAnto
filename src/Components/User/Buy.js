@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
 import "../../Components/User/Buy.css";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 
 function Buy() {
+  const navigate = useNavigate();
   const [data, setData] = useState({});
-  const[finprice,setFinprice] = useState();
+  const [finprice, setFinprice] = useState();
   const { id } = useParams();
   console.log({ id } + "productid");
 
-  const userId = localStorage.getItem("userId");
-  console.log(userId);
+  const userid = localStorage.getItem("userid");
+  console.log(userid);
 
   const [count, setCount] = useState(1);
   const increment = () => {
@@ -19,6 +20,7 @@ function Buy() {
       return;
     }
     setCount(count + 1);
+    setBuy({ ...buy, count: count + 1 });
   };
 
   const decrement = () => {
@@ -27,6 +29,7 @@ function Buy() {
       return;
     }
     setCount(count - 1);
+    setBuy({ ...buy, count: count - 1 });
   };
 
   useEffect(() => {
@@ -41,21 +44,44 @@ function Buy() {
       });
   }, []);
 
-useEffect(()=>{
-  if (count>=1){
-    setFinprice(parseInt(data.price)*parseInt(count))
-  }
-  else if(count==1){
-    setFinprice(parseInt(data.price))
-  }
-  else{
-    setFinprice(parseInt(data.price))
-  }
-},[data.price,count])
+  useEffect(() => {
+    if (count >= 1) {
+      setFinprice(parseInt(data.price) * parseInt(count));
+      setBuy({ ...buy, finprice: parseInt(data.price) * parseInt(count) });
+    } else if (count == 1) {
+      setFinprice(parseInt(data.price));
+      setBuy({ ...buy, finprice: parseInt(data.price) });
+    } else {
+      setFinprice(parseInt(data.price));
+      setBuy({ ...buy, finprice: parseInt(data.price) });
+    }
+  }, [data.price, count]);
 
+  // console.log(count);
+  // console.log(finprice);
+  // console.log(finprice);
 
+  const [buy, setBuy] = useState({
+    productId: id,
+    quantity: count,
+    price: finprice,
+    userId: userid,
+  });
+  console.log(buy);
 
-  console.log(data);
+  const FinalOrder = () => {
+    console.log("sdubmitted");
+
+    axios
+      .post("http://localhost:4000/purchase", buy)
+      .then((res) => {
+        console.log(res);
+        navigate("/order");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   return (
     <div className="buynow">
@@ -75,9 +101,9 @@ useEffect(()=>{
             <input type="text" value={count} />
             <button onClick={increment}>+</button>
           </div>
-          <a href="#" class="btn btn-primary">
+          <button type="button" class="btn btn-primary" onClick={FinalOrder}>
             Checkout Order
-          </a>
+          </button>
         </div>
       </div>
     </div>

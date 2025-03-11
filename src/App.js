@@ -27,6 +27,8 @@ import AddCart from "./Components/Petshop-folder/AddCart";
 import 'remixicon/fonts/remixicon.css'
 import Buy from "./Components/User/Buy";
 import Order from "./Components/Order";
+import Vieworder from "./Components/User/Vieworder";
+import Customers from "./Components/User/Customers";
 
 function App() {
   return (
@@ -81,6 +83,8 @@ function App() {
           <Route path='/purchaseproduct/:id'element={<Buy/>}/>
           <Route path="order" element={<Order/>}/>
           <Route path='forgetpassword' element={<Forget/>}/>
+          <Route path="vieworder" element={<Vieworder/>}/>
+          <Route path="customer" element={<Customers/>}/>
         </Routes>
       </div>
     </BrowserRouter>
