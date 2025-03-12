@@ -66,7 +66,7 @@ function Register() {
   return (
     <div className="register">
       <div className="register-box">
-        {" "}
+    
         <div className="register-use">
           <h1>User Registeration Page</h1>
         </div>
@@ -75,7 +75,7 @@ function Register() {
             <label for="inputfirst" class="form-label">
               First name
             </label>
-            <input
+            <input name="firstname"
               type="text"
               class="form-control"
               placeholder="First name"
@@ -88,7 +88,8 @@ function Register() {
             <label for="inputlast" class="form-label">
               Last Name
             </label>
-            <input
+            <input 
+            name="lastname"
               type="text"
               class="form-control"
               placeholder="Last name"
@@ -101,7 +102,8 @@ function Register() {
             <label for="inputEmail4" class="form-label">
               Email
             </label>
-            <input
+            <input 
+            name="email"
               type="email"
               class="form-control"
               id="inputEmail4"
@@ -114,7 +116,8 @@ function Register() {
             <label for="inputcontact" class="form-label">
               Contact
             </label>
-            <input
+   
+            <input name=" contact"
               type="number"
               class="form-control"
               id="inputcontact"
@@ -127,7 +130,7 @@ function Register() {
             <label for="inputdate" class="form-label">
               Date of Birth
             </label>
-            <input
+            <input name="dateofbirth"
               type="date"
               class="form-control"
               id="inputdate"
@@ -139,7 +142,7 @@ function Register() {
             <label for="inputAddress" class="form-label">
               Address{" "}
             </label>
-            <input
+            <input name="address"
               type="text"
               class="form-control"
               id="inputAddress"
@@ -152,7 +155,8 @@ function Register() {
             <label for="inputCity" class="form-label">
               City
             </label>
-            <input
+            <input 
+            name="city"
               type="text"
               class="form-control"
               id="inputCity"
@@ -164,7 +168,7 @@ function Register() {
             <label for="inputState" class="form-label">
               State
             </label>
-            <select
+            <select name="state"
               id="inputState"
               class="form-select"
               value={Reg.state}
@@ -172,6 +176,7 @@ function Register() {
             >
               <option selected>Choose...</option>
               <option>...</option>
+              <option>tamilnadu</option>
             </select>
           </div>
           <div class="col-md-2">
@@ -190,7 +195,8 @@ function Register() {
               Gender
             </label>
             <div class="form-check">
-              <input
+              <input 
+            
                 class="form-check-input"
                 type="radio"
                 name="flexRadioDefault"
@@ -220,7 +226,7 @@ function Register() {
             <label for="inputPassword4" class="form-label">
               Password
             </label>
-            <input
+            <input name="password"
               type="password"
               class="form-control"
               id="inputPassword4"
@@ -230,10 +236,11 @@ function Register() {
           </div>
           <div class="col-md-4">
             <label for="inputPassword4" class="form-label">
-              {" "}
+            
               conform Password
             </label>
             <input
+            name="confirmpassword"
               type="password"
               class="form-control"
               id="inputPassword4"
@@ -242,7 +249,7 @@ function Register() {
             />
           </div>
           <div className="register-button">
-            <button type="submit" onClick={handleSubmit}>
+            <button type="submit"  onClick={handleSubmit}>
               Register
             </button>
           </div>
