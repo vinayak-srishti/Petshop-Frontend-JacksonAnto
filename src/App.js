@@ -30,6 +30,7 @@ import Order from "./Components/Order";
 import Vieworder from "./Components/User/Vieworder";
 import Customers from "./Components/User/Customers";
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -84,6 +85,7 @@ function App() {
           <Route path='forgetpassword' element={<Forget/>}/>
           <Route path="vieworder" element={<Vieworder/>}/>
           <Route path="customer" element={<Customers/>}/>
+         
         </Routes>
       </div>
     </BrowserRouter>
