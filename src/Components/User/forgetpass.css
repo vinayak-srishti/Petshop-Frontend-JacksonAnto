@@ -1,3 +1,16 @@
+
+
+.back-ground-forget {
+    background-image: url("../../Assets/forget.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
 .back-ground-forget {
   background-image: url("../../Assets/forget.jpg");
   background-size: cover;
@@ -74,6 +87,7 @@ h1 {
 }
 
 @media (max-width: 768px) {
+
   .forget-all {
     width: 90%;
     padding: 20px;
