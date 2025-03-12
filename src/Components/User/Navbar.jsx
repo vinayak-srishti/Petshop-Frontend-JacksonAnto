@@ -8,8 +8,13 @@ function Navbar() {
 
   const handleLogout =()=>{
     localStorage.removeItem("userid")
-    alert("Are you want to logout")
-    navigate("/")
+    const isConfirmed = window.confirm(
+      "Are you Sure You Want To Logout This Account"
+    );
+    if (isConfirmed){
+      navigate("/")
+    }
+    
   }
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light nav-bar">
@@ -39,7 +44,7 @@ function Navbar() {
             <a className="nav-link active" aria-current="page" href="petshophomepage">Home</a>
             <a className="nav-link" href="#">Features</a>
             <a className="nav-link" href="#">Pricing</a>
-            <a className="nav-link" href="#">Blog</a>
+            <a className="nav-link" href="vieworder">View Orders</a>
             <a className="nav-link" href="#">Contact</a>
             <a className="nav-link profile-nav" href="profileview">Profile</a>
           </div>

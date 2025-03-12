@@ -1,32 +1,35 @@
 import React, { useEffect, useState } from "react";
 import "../../Components/User/Buy.css";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 
 function Buy() {
+  const navigate = useNavigate();
   const [data, setData] = useState({});
-  const[finprice,setFinprice] = useState();
+  const [finprice, setFinprice] = useState();
   const { id } = useParams();
   console.log({ id } + "productid");
 
-  const userId = localStorage.getItem("userId");
-  console.log(userId);
+  const userid = localStorage.getItem("userid");
+  console.log(userid);
 
-  const [count, setCount] = useState(1);
+  const [Quantity, setQuantity] = useState(1);
   const increment = () => {
-    if (count >= 5) {
+    if (Quantity >= 5) {
       alert("Limited  reached");
       return;
     }
-    setCount(count + 1);
+    setQuantity(Quantity + 1);
+    setBuy({ ...buy, quantity: Quantity + 1 });
   };
 
   const decrement = () => {
-    if (count <= 1) {
+    if (Quantity <= 1) {
       alert("Minimum Quantity is 1");
       return;
     }
-    setCount(count - 1);
+    setQuantity(Quantity - 1);
+    setBuy({ ...buy, quantity: Quantity - 1 });
   };
 
   useEffect(() => {
@@ -41,21 +44,45 @@ function Buy() {
       });
   }, []);
 
-useEffect(()=>{
-  if (count>=1){
-    setFinprice(parseInt(data.price)*parseInt(count))
-  }
-  else if(count==1){
-    setFinprice(parseInt(data.price))
-  }
-  else{
-    setFinprice(parseInt(data.price))
-  }
-},[data.price,count])
+  useEffect(() => {
+    if (Quantity >= 1) {
+      setFinprice(parseInt(data.price) * parseInt(Quantity));
+      setBuy({ ...buy, finprice: parseInt(data.price) * parseInt(Quantity) });
+    } else if (Quantity == 1) {
+      setFinprice(parseInt(data.price));
+      setBuy({ ...buy, finprice: parseInt(data.price) });
+    } else {
+      setFinprice(parseInt(data.price));
+      setBuy({ ...buy, finprice: parseInt(data.price) });
+    }
+  }, [data.price, Quantity]);
+
+  console.log(Quantity);
+  console.log(finprice);
+  console.log(finprice);
+
+  const [buy, setBuy] = useState({
+    productId: id,
+    quantity: Quantity,
+    finprice: finprice,
+    userId: userid,
+  });
+  console.log(buy);
+
+  const FinalOrder = () => {
+    console.log("sdubmitted");
 
 
-
-  console.log(data);
+    axios
+      .post("http://localhost:4000/purchase", buy)
+      .then((res) => {
+        console.log(res);
+        navigate("/order");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   return (
     <div className="buynow">
@@ -72,12 +99,12 @@ useEffect(()=>{
           <div className="buynow-quantitys">
             <h3>Quantity</h3>
             <button onClick={decrement}>-</button>
-            <input type="text" value={count} />
+            <input type="text" value={Quantity} />
             <button onClick={increment}>+</button>
           </div>
-          <a href="#" class="btn btn-primary">
+          <button type="button" class="btn btn-primary" onClick={FinalOrder}>
             Checkout Order
-          </a>
+          </button>
         </div>
       </div>
     </div>

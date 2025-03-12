@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Register.css";
-// import { PiApproximateEqualsDuotone } from "react-icons/pi";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -11,6 +10,7 @@ function Register() {
     lastname: "",
     email: "",
     city: "",
+    state: "", // Added state field
     dateofbirth: "",
     address: "",
     pincode: "",
@@ -20,45 +20,53 @@ function Register() {
     confirmpassword: "",
   });
 
-  const myfunction = (r) => {
-    setReg({
-      ...Reg,
-      [r.target.name]: r.target.value,
-    });
-    console.log(Reg);
+  const myfunction = (e) => {
+    const { name, value } = e.target;
+    setReg((prevReg) => ({
+      ...prevReg,
+      [name]: value,
+    }));
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
     if (!Reg.firstname) {
-      alert("first name required");
+      alert("First name required");
     } else if (!Reg.lastname) {
-      alert("last name required");
+      alert("Last name required");
     } else if (!Reg.email) {
-      alert("email required");
+      alert("Email required");
     } else if (!Reg.contact) {
-      alert("contact required");
+      alert("Contact required");
     } else if (!Reg.city) {
-      alert("city required");
+      alert("City required");
+    } else if (!Reg.state) {
+      alert("State required"); // Added validation for state
     } else if (!Reg.pincode) {
-      alert("pincode required");
+      alert("Pincode required");
     } else if (!Reg.gender) {
-      alert("gender required");
+      alert("Gender required");
     } else if (!Reg.dateofbirth) {
-      alert("date of birth required");
+      alert("Date of birth required");
     } else if (!Reg.address) {
-      alert("address required");
+      alert("Address required");
     } else if (Reg.password !== Reg.confirmpassword) {
-      alert("plaese check the password");
+      alert("Passwords do not match");
     } else {
       axios
         .post("http://localhost:4000/petshopuserregisteration", Reg)
         .then((response) => {
-          if (response.data.status == 200) {
-            alert("registeration sucessfull");
+          if (response.data.status === 200) {
+            alert("Registration successful");
             navigate("/Userlogin");
           } else {
             alert("Registration failed");
           }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          alert("An error occurred while registering");
         });
     }
   };
@@ -66,196 +74,157 @@ function Register() {
   return (
     <div className="register">
       <div className="register-box">
-    
         <div className="register-use">
-          <h1>User Registeration Page</h1>
+          <h1>User Registration Page</h1>
         </div>
-        <form class="row g-4">
-          <div class="col-6">
-            <label for="inputfirst" class="form-label">
-              First name
-            </label>
-            <input name="firstname"
+        <form className="row g-4" onSubmit={handleSubmit}>
+          <div className="col-6">
+            <label className="form-label">First name</label>
+            <input
+              name="firstname"
               type="text"
-              class="form-control"
+              className="form-control"
               placeholder="First name"
-              aria-label="First name"
               value={Reg.firstname}
               onChange={myfunction}
             />
           </div>
-          <div class="col-6">
-            <label for="inputlast" class="form-label">
-              Last Name
-            </label>
-            <input 
-            name="lastname"
+          <div className="col-6">
+            <label className="form-label">Last Name</label>
+            <input
+              name="lastname"
               type="text"
-              class="form-control"
+              className="form-control"
               placeholder="Last name"
-              aria-label="Last name"
               value={Reg.lastname}
               onChange={myfunction}
             />
           </div>
-          <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">
-              Email
-            </label>
-            <input 
-            name="email"
+          <div className="col-md-6">
+            <label className="form-label">Email</label>
+            <input
+              name="email"
               type="email"
-              class="form-control"
-              id="inputEmail4"
+              className="form-control"
               placeholder="Enter your mail"
               value={Reg.email}
               onChange={myfunction}
             />
           </div>
-          <div class="col-md-6">
-            <label for="inputcontact" class="form-label">
-              Contact
-            </label>
-   
-            <input name=" contact"
-              type="number"
-              class="form-control"
-              id="inputcontact"
+          <div className="col-md-6">
+            <label className="form-label">Contact</label>
+            <input
+              name="contact"
+              type="text"
+              className="form-control"
               placeholder="Enter your number"
-              value={Reg.city}
+              value={Reg.contact}
               onChange={myfunction}
             />
           </div>
-          <div class="col-6">
-            <label for="inputdate" class="form-label">
-              Date of Birth
-            </label>
-            <input name="dateofbirth"
+          <div className="col-6">
+            <label className="form-label">Date of Birth</label>
+            <input
+              name="dateofbirth"
               type="date"
-              class="form-control"
-              id="inputdate"
+              className="form-control"
               value={Reg.dateofbirth}
               onChange={myfunction}
             />
           </div>
-          <div class="col-6">
-            <label for="inputAddress" class="form-label">
-              Address{" "}
-            </label>
-            <input name="address"
+          <div className="col-6">
+            <label className="form-label">Address</label>
+            <input
+              name="address"
               type="text"
-              class="form-control"
-              id="inputAddress"
+              className="form-control"
               placeholder="1234 Main St"
               value={Reg.address}
               onChange={myfunction}
             />
           </div>
-          <div class="col-md-6">
-            <label for="inputCity" class="form-label">
-              City
-            </label>
-            <input 
-            name="city"
+          <div className="col-md-4">
+            <label className="form-label">City</label>
+            <input
+              name="city"
               type="text"
-              class="form-control"
-              id="inputCity"
+              className="form-control"
               value={Reg.city}
               onChange={myfunction}
             />
           </div>
-          <div class="col-md-4">
-            <label for="inputState" class="form-label">
-              State
-            </label>
-            <select name="state"
-              id="inputState"
-              class="form-select"
+          <div className="col-md-4">
+            <label className="form-label">State</label>
+            <input
+              name="state"
+              type="text"
+              className="form-control"
               value={Reg.state}
               onChange={myfunction}
-            >
-              <option selected>Choose...</option>
-              <option>...</option>
-              <option>tamilnadu</option>
-            </select>
+            />
           </div>
-          <div class="col-md-2">
-            <label
-              for="inputZip"
-              class="form-label"
+          <div className="col-md-2">
+            <label className="form-label">Pin Code</label>
+            <input
+              name="pincode"
+              type="text"
+              className="form-control"
               value={Reg.pincode}
               onChange={myfunction}
-            >
-              Pin Code
-            </label>
-            <input type="text" class="form-control" id="inputZip" />
+            />
           </div>
-          <div class="col-md-4">
-            <label for="inputCity" class="form-label">
-              Gender
-            </label>
-            <div class="form-check">
-              <input 
-            
-                class="form-check-input"
-                type="radio"
-                name="flexRadioDefault"
-                id="flexRadioDefault1"
-                onChange={myfunction}
-              />
-              <label class="form-check-label" for="flexRadioDefault1">
-                Male
-              </label>
-            </div>
-            <div class="form-check">
+          <div className="col-md-4">
+            <label className="form-label">Gender</label>
+            <div className="form-check">
               <input
-                class="form-check-input"
+                className="form-check-input"
                 type="radio"
-                name="flexRadioDefault"
-                id="flexRadioDefault2"
+                name="gender"
+                value="Male"
+                checked={Reg.gender === "Male"}
                 onChange={myfunction}
-                checked
               />
-              <label class="form-check-label" for="flexRadioDefault2">
-                Female
-              </label>
+              <label className="form-check-label">Male</label>
+            </div>
+            <div className="form-check">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="gender"
+                value="Female"
+                checked={Reg.gender === "Female"}
+                onChange={myfunction}
+              />
+              <label className="form-check-label">Female</label>
             </div>
           </div>
-
-          <div class="col-md-4">
-            <label for="inputPassword4" class="form-label">
-              Password
-            </label>
-            <input name="password"
+          <div className="col-md-4">
+            <label className="form-label">Password</label>
+            <input
+              name="password"
               type="password"
-              class="form-control"
-              id="inputPassword4"
+              className="form-control"
               value={Reg.password}
               onChange={myfunction}
             />
           </div>
-          <div class="col-md-4">
-            <label for="inputPassword4" class="form-label">
-            
-              conform Password
-            </label>
+          <div className="col-md-4">
+            <label className="form-label">Confirm Password</label>
             <input
-            name="confirmpassword"
+              name="confirmpassword"
               type="password"
-              class="form-control"
-              id="inputPassword4"
+              className="form-control"
               value={Reg.confirmpassword}
               onChange={myfunction}
             />
           </div>
           <div className="register-button">
-            <button type="submit"  onClick={handleSubmit}>
-              Register
-            </button>
+            <button type="submit">Register</button>
           </div>
         </form>
       </div>
     </div>
   );
 }
+
 export default Register;
