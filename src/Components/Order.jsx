@@ -7,14 +7,14 @@ import { useNavigate } from "react-router-dom";
 function Order() {
   const [showCardInputs, setShowCardInputs] = useState(false);
   const [data, setData] = useState({});
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   const userid = localStorage.getItem("userid");
 
   const conformOrder = () => {
     alert(
       "thanks for placing your order with us. Your package is being processed and will be on its way soon."
     );
-    
+       navigate("/petshophomepage");
   };
   useEffect(() => {
     axios
@@ -31,8 +31,6 @@ function Order() {
     const selectedOption = e.target.value;
     setShowCardInputs(selectedOption === "Cards");
   };
-
-
 
   return (
     <div className="order">
@@ -137,9 +135,12 @@ function Order() {
             </div>
           </div>
         </div>
-  <form class="row g-3 needs-validation" onSubmit={conformOrder} novalidate>
-        {showCardInputs && (
-        
+        <form
+          class="row g-3 needs-validation"
+          onSubmit={conformOrder}
+          novalidate
+        >
+          {showCardInputs && (
             <div class="order-container">
               <div class="row">
                 <div class="col">
@@ -207,19 +208,17 @@ function Order() {
                 </div>
               </div>
             </div>
-        )}
+          )}
 
-        <div>
-          <button
-            type="submit"
-            className="order-btn order-btn-success" onClick={()=>{
-              conformOrder()
-              navigate("/petshophomepage")
-            }}
-          >
-            Confirm Order
-          </button>
-        </div>
+          <div>
+            <button
+              type="submit"
+              className="order-btn order-btn-success"
+             
+            >
+              Confirm Order
+            </button>
+          </div>
         </form>
       </div>
     </div>
