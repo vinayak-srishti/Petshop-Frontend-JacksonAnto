@@ -13,23 +13,23 @@ function Buy() {
   const userid = localStorage.getItem("userid");
   console.log(userid);
 
-  const [count, setCount] = useState(1);
+  const [Quantity, setQuantity] = useState(1);
   const increment = () => {
-    if (count >= 5) {
+    if (Quantity >= 5) {
       alert("Limited  reached");
       return;
     }
-    setCount(count + 1);
-    setBuy({ ...buy, count: count + 1 });
+    setQuantity(Quantity + 1);
+    setBuy({ ...buy, quantity: Quantity + 1 });
   };
 
   const decrement = () => {
-    if (count <= 1) {
+    if (Quantity <= 1) {
       alert("Minimum Quantity is 1");
       return;
     }
-    setCount(count - 1);
-    setBuy({ ...buy, count: count - 1 });
+    setQuantity(Quantity - 1);
+    setBuy({ ...buy, quantity: Quantity - 1 });
   };
 
   useEffect(() => {
@@ -45,32 +45,33 @@ function Buy() {
   }, []);
 
   useEffect(() => {
-    if (count >= 1) {
-      setFinprice(parseInt(data.price) * parseInt(count));
-      setBuy({ ...buy, finprice: parseInt(data.price) * parseInt(count) });
-    } else if (count == 1) {
+    if (Quantity >= 1) {
+      setFinprice(parseInt(data.price) * parseInt(Quantity));
+      setBuy({ ...buy, finprice: parseInt(data.price) * parseInt(Quantity) });
+    } else if (Quantity == 1) {
       setFinprice(parseInt(data.price));
       setBuy({ ...buy, finprice: parseInt(data.price) });
     } else {
       setFinprice(parseInt(data.price));
       setBuy({ ...buy, finprice: parseInt(data.price) });
     }
-  }, [data.price, count]);
+  }, [data.price, Quantity]);
 
-  // console.log(count);
-  // console.log(finprice);
-  // console.log(finprice);
+  console.log(Quantity);
+  console.log(finprice);
+  console.log(finprice);
 
   const [buy, setBuy] = useState({
     productId: id,
-    quantity: count,
-    price: finprice,
+    quantity: Quantity,
+    finprice: finprice,
     userId: userid,
   });
   console.log(buy);
 
   const FinalOrder = () => {
     console.log("sdubmitted");
+
 
     axios
       .post("http://localhost:4000/purchase", buy)
@@ -98,7 +99,7 @@ function Buy() {
           <div className="buynow-quantitys">
             <h3>Quantity</h3>
             <button onClick={decrement}>-</button>
-            <input type="text" value={count} />
+            <input type="text" value={Quantity} />
             <button onClick={increment}>+</button>
           </div>
           <button type="button" class="btn btn-primary" onClick={FinalOrder}>
