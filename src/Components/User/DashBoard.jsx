@@ -14,9 +14,9 @@ function Dashboard() {
         <ul className="top-menu">
           <li><a href="">Dashboard</a></li>
           <li><a href="petshopreq">PetshopRegister</a></li>
-          <li><a href="/inventory">Inventory</a></li>
+          <li><a href="/viewallproduct">Inventory</a></li>
           <li><a href="/orders">Orders</a></li>
-          <li><a href="/customers">Customers</a></li>
+          <li><a href="/viewalluser">Customers</a></li>
         </ul>
       
         <button className="logout-button" onClick={handleLogout}>

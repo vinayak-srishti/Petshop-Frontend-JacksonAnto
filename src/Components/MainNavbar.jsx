@@ -7,6 +7,7 @@ import user from "../Assets/user.png";
 
 function MainNavbar() {
   const navigate=useNavigate()
+  
   return (
     <div>
       <nav className="navbar navbar-expand-md NAVBAR container">
@@ -77,7 +78,7 @@ function MainNavbar() {
                       <div class="col navlogin" >
                         <img src={user} />
                         <button type="button" class="btn btn-primary" onClick={()=>{
-                          navigate("Userlogin")
+                          navigate("Userlogin") ;
                         }}>
                           User Login
                         </button>

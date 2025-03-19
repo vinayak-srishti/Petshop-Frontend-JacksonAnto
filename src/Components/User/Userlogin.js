@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Edit.css";
 import { RiUser3Fill, RiLock2Fill } from "react-icons/ri";
 import axios from "axios";
@@ -11,6 +11,11 @@ function Userlogin() {
     password: "",
   });
 
+  // useEffect(()=>{
+  //   ( window.location.reload(1))
+  // })
+
+  
   const mylogin = (q) => {
     setLogin({
       ...login,

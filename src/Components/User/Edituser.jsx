@@ -94,7 +94,6 @@ lastname} onChange={myFunction}/>
         </form>
       </div>
     </div>
-    ////ghjj
   );
 }
 

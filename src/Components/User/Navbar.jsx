@@ -44,7 +44,7 @@ function Navbar() {
             <a className="nav-link active" aria-current="page" href="petshophomepage">Home</a>
             <a className="nav-link" href="#">Features</a>
             <a className="nav-link" href="#">Pricing</a>
-            <a className="nav-link" href="vieworder">View Orders</a>
+            <a className="nav-link" href="customer">View Orders</a>
             <a className="nav-link" href="#">Contact</a>
             <a className="nav-link profile-nav" href="profileview">Profile</a>
           </div>

@@ -2,26 +2,22 @@ import { FaEnvelope } from "react-icons/fa";
 import "./forgetpass.css";
 
 function Forget() {
-
-  
-
   return (
     <div className="back-ground-forget">
       <div className="forget-all">
+        <h1>Forget Password</h1>
+
+        <label className="forget-label" htmlFor="email">
+          Email <FaEnvelope className="forget-icon" />
+        </label>
+        <input
+          type="email"
+          id="email"
+          className="forget-password-input"
+          placeholder="Enter your email"
+          required
+        />
         <form>
-          <h1>Forget Password</h1>
-
-          <label className="forget-label" htmlFor="email">
-            Email <FaEnvelope className="forget-icon" />
-          </label>
-          <input
-            type="email"
-            id="email"
-            className="forget-password-input"
-            placeholder="Enter your email"
-            required
-          />
-
           <label className="forget-label" htmlFor="password">
             New Password
           </label>

@@ -32,7 +32,8 @@ import Edituser from "././Components/User/Edituser";
 
 import Vieworder from "./Components/User/Vieworder";
 import Customers from "./Components/User/Customers";
-
+import Viewalluser from "./Components/Admin/Viewalluser";
+import Viewallproducts from "./Components/Admin/Viewallproducts";
 
 function App() {
   return (
@@ -92,7 +93,8 @@ function App() {
 
           <Route path="vieworder" element={<Vieworder/>}/>
           <Route path="customer" element={<Customers/>}/>
-
+          <Route path="viewalluser" element={<Viewalluser/>}/>
+          <Route path="viewallproduct" element={<Viewallproducts/>}/>
         </Routes>
       </div>
     </BrowserRouter>
