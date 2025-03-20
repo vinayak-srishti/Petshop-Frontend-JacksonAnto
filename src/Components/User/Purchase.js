@@ -1,59 +1,45 @@
-import React from 'react'
-import "./Purchase.css"
-import purchasecat from "../../Assets/purchasecat.jpg"
-import purchasedog from"../../Assets/purchasedog.jpg"
-function Purchase() {
-    return (
-        <div>
-            <div class="container text-center">
-                <div class="row row-cols-2">
-                    <div class="col">
-                        <figure class="figure">
-                            <img src={purchasecat} class="figure-img img-fluid rounded" alt="..." />
-                            <figcaption class="figure-caption">A caption for the above image.</figcaption>
-                        </figure>
-                    </div>
+import { useState, useEffect } from "react";
+import { FiMenu, FiHome, FiUser, FiSettings, FiLogOut } from "react-icons/fi";
 
-                    <div class="col-">
-                        <div class="card cards-height">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Name:Persian Cat</li>
-                                <li class="list-group-item" >Breed:American</li>
-                                <li class="list-group-item">Ordered Date:08/08/2024</li>
-                                <li class="list-group-item">Age:1</li>
-                                <li class="list-group-item">Delivery Address:Nagercoil
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+export default function Purchase() {
+  const [isOpen, setIsOpen] = useState(window.innerWidth > 768);
 
-                </div>
-            </div>
-            <div class="container text-center dog">
-                <div class="row row-cols-2">
-                    <div class="col">
-                        <figure class="figure">
-                            <img src={purchasedog} class="figure-img img-fluid rounded" alt="..." />
-                            <figcaption class="figure-caption">A caption for the above image.</figcaption>
-                        </figure>
-                    </div>
-                    <div class="col-">
-                        <div class="card cards-heights " >
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Name:Lab</li>
-                                <li class="list-group-item">Breed: Anto Shebin</li>
-                                <li class="list-group-item">Ordered Date:08/08/2024</li>
-                                <li class="list-group-item">Age:1</li>
-                                <li class="list-group-item">Delivery Address:Nagercoil
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+  // Auto collapse on small screens
+  useEffect(() => {
+    const handleResize = () => {
+      setIsOpen(window.innerWidth > 768);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-                </div>
-            </div>
-        </div> 
-    )
+  return (
+    <div className="flex">
+      <div className={`bg-gray-900 text-white h-screen p-5 transition-all duration-300 ${isOpen ? "w-64" : "w-16"}`}>
+        <button className="mb-5 md:hidden" onClick={() => setIsOpen(!isOpen)}>
+          <FiMenu size={24} />
+        </button>
+
+        <ul className="space-y-4">
+          <NavItem icon={<FiHome />} text="Dashboard" isOpen={isOpen} />
+          <NavItem icon={<FiUser />} text="Profile" isOpen={isOpen} />
+          <NavItem icon={<FiSettings />} text="Settings" isOpen={isOpen} />
+          <NavItem icon={<FiLogOut />} text="Logout" isOpen={isOpen} />
+        </ul>
+      </div>
+
+      <div className="flex-1 p-5">
+        <h1 className="text-xl font-bold">Dashboard Content</h1>
+      </div>
+    </div>
+  );
 }
 
-export default Purchase
+const NavItem = ({ icon, text, isOpen }) => {
+  return (
+    <li className="flex items-center space-x-3 cursor-pointer hover:bg-gray-700 p-2 rounded">
+      {icon}
+      {isOpen && <span>{text}</span>}
+    </li>
+  );
+};

@@ -79,13 +79,8 @@
     background-color: rgb(237, 242, 247);
   }
   
-  h1 {
+  .content h1 {
     font-size: 32px;
-    color: rgb(45, 55, 72);
-  }
-  
-  p {
-    font-size: 18px;
     color: rgb(45, 55, 72);
   }
   
