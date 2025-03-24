@@ -1,27 +1,29 @@
-import React, { useState } from 'react';
-import './PetShopAdminLogin.css';
-import { RiUser3Fill, RiLock2Fill } from 'react-icons/ri';
+import React, { useState } from "react";
+import "./PetShopAdminLogin.css";
+import { RiUser3Fill, RiLock2Fill } from "react-icons/ri";
 import profileadmin from "../../Assets/profile admin.jpg";
+import { useNavigate } from "react-router-dom";
 
 function PetShopAdminLogin() {
+  const navigate = useNavigate();
   const [admin, setAdmin] = useState({
     username: "",
-    password: ""
+    password: "",
   });
 
- 
   const handleInputChange = (e) => {
     setAdmin({
       ...admin,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
-
 
   const loginAdmin = (e) => {
     e.preventDefault();
     if (admin.username === "admin123" && admin.password === "password123") {
       console.log("Login successful!");
+      alert("Login successful!")
+      navigate("/admindash")
     } else {
       console.log("Invalid login");
     }
